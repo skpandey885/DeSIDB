@@ -1,9 +1,14 @@
-
+import React from 'react'
+import HeroSection from '../components/homepage/HeroSection';
+import Info from '../components/homepage/Info';
+import Stats from '../components/homepage/Stats';
 function App() {
   return (
-    <div className="App">
-      <p className='text-4xl'>Desi Db</p>
-    </div>
+    <main>
+     <HeroSection/> 
+     <Info />
+     <Stats />
+    </main>
   );
 }
 
