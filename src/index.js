@@ -9,7 +9,7 @@ import RegisterCollegePage from './pages/register/RegisterCollegePage';
 import RegisterStudentPage from './pages/register/RegisterStudentPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import Fellowship from './pages/Others/Fellowship';
+import Fellowship from './pages/others/Fellowship';
 import About from './pages/About';
 import { createClient, WagmiConfig } from 'wagmi';
 
