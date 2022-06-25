@@ -9,12 +9,12 @@ import RegisterDropdown from './RegisterDropdown'
 const Navbar = () => {
   
   return (
-    <header className='bg-white py-8 px-6 z-50'>
+    <header className='z-50 px-6 py-4 bg-white'>
       <nav className='flex items-center justify-between'>
         <Link to='/'>
         <Logo/>
         </Link>
-        <div className='flex gap-4 items-center'>
+        <div className='flex items-center gap-4'>
           <RegisterDropdown/>
           <BrowseDropdown/>
           <MiscDropdown/>

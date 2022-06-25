@@ -2,13 +2,22 @@ import React from 'react'
 
 const RegisterCollegePage = () => {
   return (
-  
-    <div class="flow-root ">
-     <div className="float-left md:pt-[125px] pl-8 register-sign">
+    <div class="flow-root">
+        <div className="ml-[150px] mt-10 register-college-text">
+           <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+              Register your college and Avail incremental benefits
+            </p>
+            <p className=" ml-[100px]  mt-5 text-xl text-gray-500">
+              Registering here makes your college to avail multiple benefits like Fellowships, Programs and Trainings.
+            </p>
+      </div>
+
+      
+     <div className="float-left md:pt-[80px] pl-[100px] register-sign">
      <img src="/assets/register.png" class="max-w-full h-auto" alt="..." />
      </div> 
 
-   <div className="flex items-end justify-end p-20">
+   <div className="flex items-end justify-end py-[50px]">
   <div className="mx-auto w-full max-w-[550px]">
     <form action="https://formbold.com/s/FORM_ID" method="POST">
       <div className="mb-5">
