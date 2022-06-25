@@ -10,6 +10,7 @@ import RegisterStudentPage from './pages/register/RegisterStudentPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Fellowship from './pages/others/Fellowship';
+import About from './pages/About';
 import { createClient, WagmiConfig } from 'wagmi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +30,7 @@ root.render(
       <Route path='/register/college' element={<RegisterCollegePage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
+      <Route path='/About' element={<About />} />
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
     <Footer />

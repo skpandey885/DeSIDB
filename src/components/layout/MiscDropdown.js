@@ -27,7 +27,7 @@ export default function MiscDropdown() {
           <Menu.Items className="absolute z-50 right-0 mt-2 w-56 origin-top-left bg-white ring-1  ring-gray-200  shadow-lg rounded">
             <div className="p-1  flex flex-col i">
               <Menu.Item>
-                  <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/fellowships'>
+                  <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/others/fellowships'>
                     Fellowships
                   </Link>
 
