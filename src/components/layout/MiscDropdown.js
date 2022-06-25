@@ -33,15 +33,11 @@ export default function MiscDropdown() {
 
               </Menu.Item>
               <Menu.Item>
-              <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/trainings'>
+              <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/others/training'>
                   Training Programs
                   </Link>
               </Menu.Item>
-              <Menu.Item>
-              <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/awards'>
-                  Awards
-                  </Link>
-              </Menu.Item>
+            
             </div>
           </Menu.Items>
         </Transition>
