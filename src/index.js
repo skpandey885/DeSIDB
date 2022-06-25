@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
 import './index.css';
 import App from './pages/App';
 import BrowseCollegesPage from './pages/browse/BrowseCollegesPage';
