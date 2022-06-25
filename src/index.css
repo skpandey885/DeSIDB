@@ -52,3 +52,11 @@ select{
   .e-input-group:not(.e-float-icon-left), .e-input-group.e-success:not(.e-float-icon-left), .e-input-group.e-warning:not(.e-float-icon-left), .e-input-group.e-error:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left){
     border: none;
   }
+@layer components {
+  .primary-btn {
+      @apply bg-blue-500 hover:bg-blue-400 text-white rounded px-4 py-2 duration-200 ease-in-out
+  }
+  .navlink {
+      @apply px-4 py-2 font-medium hover:bg-gray-100 rounded duration-200 ease-in-out
+  }
+}
