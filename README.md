@@ -7,7 +7,7 @@ India is a country with a population of 6.8 crore students graduating each year.
 <br>
 So in order to address this issue and simplify everyone's life, we present to you our solution, an online portal <b><em>DeSiDB</em></b>: A Decentralized  Student Information Database, which enables organisations to access student information from their colleges, to provide them scholarships or to connect them with jobs matching to their skills.  
 
-<h1>Technologies: </h1>
+<h1>Technologies: </h1>:fa-lightbulb-o
 <h2>Languages-</h2>
 <ul>
 <li>ReactJS</li>
