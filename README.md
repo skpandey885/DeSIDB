@@ -1,4 +1,5 @@
 # Team DEV - Project DeSiDB
+<img src="Logo.png" style="border-radius: 50%">
 
 <h1> INTRODUCTION -🎆 </h1> 
 <br>
