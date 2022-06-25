@@ -1,8 +1,11 @@
 import React from 'react'
+import Studentcard from '../../components/Collegecard'
 
 const BrowseStudentPage = () => {
   return (
-    <div>BrowseStudentPage</div>
+    <div>
+      <Studentcard />
+    </div>
   )
 }
 
