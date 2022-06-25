@@ -1,10 +1,11 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
-
+import { Link } from 'react-router-dom'
 const Studentcard = () => {
     return (
         <div>
-            <div className="p- mb-20 max-w-sm bg-white rounded-lg border shadow-md sm:p-8 ml-5 ">
+        <Link to="/browse/students/studentDetail">
+        <div className="p- mb-20 max-w-sm bg-white rounded-lg border shadow-md sm:p-8 ml-5 ">
                 
                 <div className="flex items-baseline text-gray-900 ">
                     <span className="text-4xl font-extrabold tracking-tight">Name</span>
@@ -58,6 +59,7 @@ const Studentcard = () => {
                     
                 </ul>
             </div>
+        </Link>
 
         </div>
     )

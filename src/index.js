@@ -15,6 +15,8 @@ import { createClient, WagmiConfig } from 'wagmi';
 import {Toaster} from "react-hot-toast";
 
 import Training from './pages/others/Training';
+import StudentDetail from './pages/StudentDetail';
+import Contact from './pages/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const client = createClient();
@@ -34,6 +36,8 @@ root.render(
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
+      <Route path='/Contact' element={<Contact />} />  
+      <Route path="/browse/students/studentDetail" element={<StudentDetail />} />
       <Route path='/About' element={<About />} />
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
