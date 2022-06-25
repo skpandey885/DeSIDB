@@ -1,13 +1,12 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 
-const Collegecard = () => {
+const Collegecard = ({data}) => {
     return (
         <div>
             <div className="p-5 mb-20 max-w-sm bg-white rounded-lg border shadow-md sm:p-8 ml-5 ">
-
                 <div className="flex items-baseline text-gray-900 ">
-                    <span className="text-5xl font-extrabold tracking-tight">Example </span>
+                    <span className="text-5xl font-extrabold tracking-tight"> {data.collegeName} </span>
                 </div>
                 {/* List */}
                 <ul role="list" className="my-7 space-y-5">
@@ -15,35 +14,35 @@ const Collegecard = () => {
                         {/* Icon */}
 
                         <span className="text-xl font-bold leading-tight text-blue  ">
-                            College Address : <span className='text-lg font-normal '>{'Rampur '}</span>
+                            College Address : <span className='text-lg font-normal '>{data.collegeAddress}</span>
                         </span>
                     </li>
                     <li className="flex space-x-3">
                         {/* Icon */}
 
                         <span className="text-xl font-bold leading-tight text-blue  ">
-                            Telephone : <span className='text-lg font-normal '>{'28012387 '}</span>
+                            Telephone : <span className='text-lg font-normal '>{data.tel}</span>
                         </span>
                     </li>
                     <li className="flex space-x-3">
                         {/* Icon */}
 
                         <span className="text-xl font-bold leading-tight text-blue  ">
-                            Website : <span className='text-lg font-normal'>https://soa.ac.in</span>
+                            Website : <span className='text-lg font-normal'>{data.website}</span>
                         </span>
                     </li>
                     <li className="flex space-x-3">
                         {/* Icon */}
 
                         <span className="text-xl font-bold leading-tight text-blue  ">
-                            AICTE Certified : <span className='text-lg font-normal '>{'Yes '}</span>
+                            AICTE Certified : <span className='text-lg font-normal '>{data.aicteCertified ? 'Yes' : 'No' }</span>
                         </span>
                     </li>
                     <li className="flex space-x-3">
                         {/* Icon */}
 
                         <span className="text-xl font-bold leading-tight text-blue  ">
-                            MHRD Affiliated : <span className='text-lg font-normal '>{'Yes '}</span>
+                            MHRD Affiliated : <span className='text-lg font-normal '>{data.mhrdCertified ? 'Yes' : 'No' }</span>
                         </span>
                     </li>
 
