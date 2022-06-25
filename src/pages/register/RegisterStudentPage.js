@@ -7,14 +7,14 @@ import StudentForm from '../../partials/StudentForm'
 
 const Student = () => {
   const {register,handleSubmit} = useForm();
-  const {data:signer} = useSigner();
+ const {data:signer} = useSigner();
   
   
   const contract = useContract({
     addressOrName: CONTRACT_ADDRESS,
     contractInterface: CONTRACT_ABI,
     signerOrProvider:signer
-  })
+  }) 
   
   const registerStudent = async (data) => {
     try{
