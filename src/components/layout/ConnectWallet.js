@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAccount, useConnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
+
 export const shortenAddress = (address) => {
   return address.slice(0, 6) + "..." + address.slice(-5, -1);
 };
