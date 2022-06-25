@@ -9,7 +9,7 @@ import RegisterCollegePage from './pages/register/RegisterCollegePage';
 import RegisterStudentPage from './pages/register/RegisterStudentPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import Fellowship from './pages/Others/Fellowships';
+import Fellowship from './pages/others/Fellowship';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +23,7 @@ root.render(
       <Route path='/register/student' element={<RegisterStudentPage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />  
-      <Route path='/Others/fellowships' element={<Fellowship />} />
+      <Route path='/others/fellowships' element={<Fellowship />} />
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
     <Footer />
