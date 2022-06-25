@@ -1,130 +1,165 @@
-import React from 'react'
+import { Signer } from 'ethers';
+import React, { useEffect, useState } from 'react'
+import {useForm} from 'react-hook-form'
+import toast from 'react-hot-toast';
+import { useContract, useSigner } from 'wagmi';
+import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../../components/contract/contract';
 
 const RegisterCollegePage = () => {
+  const [loading,setLoading] = useState(false);
+  const [isAdmin,setIsAdmin] = useState(false);
+  const {register,handleSubmit,formState:{errors}} = useForm();
+  
+  const {data:signer} = useSigner();
+  const contract = useContract({
+    addressOrName: CONTRACT_ADDRESS,
+    contractInterface: CONTRACT_ABI,
+    signerOrProvider:signer
+  })
+  
+  const checkIfAdmin = async () =>{
+    console.log("Inside check admin")
+    try{
+      if(contract && signer){
+        const _isAdmin = await contract.checkIfAdmin();
+        console.log(_isAdmin);
+        setIsAdmin(_isAdmin);         
+      }
+    } catch(err){
+      console.log(err);
+    }
+  } 
+
+  useEffect(() => {
+    checkIfAdmin();    
+  }, [signer])
+  
+  
+  const registerCollege = async (data) => {
+    setLoading(true);
+    try{
+      const registerTx = await contract.registerCollege(data.collegeName,data.collegeAddress,data.mobile,data.collegeEmail,data.website,data.aicte,data.mhrd);
+      await registerTx.wait();
+      console.log(registerTx);
+      toast.success("College added successfully"); 
+    } catch(err) {
+      toast.error("Failed to add college due to some error")
+      console.log(err);
+    }
+    setLoading(false);
+  }
+  if(!signer){
+    return <div className='h-[90vh] w-screen flex items-center justify-center'>Pleae Connect to your metamask wallet</div>
+  }
+
+  if(!isAdmin){
+    return <div className='h-[90vh] w-screen flex items-center justify-center'>You do not have the authority to add colleges . Please contact the admin at xyz@gmail.com</div>
+  }
+  
   return (
-    <div class="flow-root">
+    <div class="px-4">
         <div className="ml-[150px] mt-10 register-college-text">
-           <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+           <p className="mt-1 text-4xl font-extrabold text-gray-900  sm:text-5xl sm:tracking-tight">
               Register your college and Avail incremental benefits
             </p>
             <p className=" ml-[100px]  mt-5 text-xl text-gray-500">
               Registering here makes your college to avail multiple benefits like Fellowships, Programs and Trainings.
             </p>
-      </div>
-      
-     <div className="float-left md:pt-[80px] pl-[100px] register-sign">
-     <img src="/assets/register.png" class="max-w-full h-auto" alt="..." />
+      </div>      
+        <div className="float-left md:pt-[80px] pl-[100px] register-sign">
+        <img src="/assets/register.png" className="max-w-full h-auto" alt="..." />
      </div> 
-
-   <div className="flex items-end justify-end py-[50px]">
-  <div className="mx-auto w-full max-w-[550px]">
-    <form action="https://formbold.com/s/FORM_ID" method="POST">
+    <div className="flex items-end justify-end py-[50px]">
+    <div className="mx-auto w-full max-w-[550px]">
+    <form onSubmit={handleSubmit(registerCollege)}>
       <div className="mb-5">
         <label
-          htmlFor="name"
-          className="mb-3 block text-base font-medium text-[#07074D]"
+          className="mb-3 block text-base font-medium "
         >
          College Name
         </label>
         <input
           type="text"
-          name="name"
-          id="name"
+          {...register('collegeName',{required:true})}
           placeholder="Full Name"
-          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          required
         />
       </div>
-
-      
-
-
       <div className="mb-5">
         <label
           htmlFor="address-text"
-          className="mb-3 block text-base font-medium text-[#07074D]"
+          className="mb-3 block text-base font-medium"
+          required
         >
          Address
         </label>
         <input
           type="text"
-          name="address-text"
-          id="address-text"
+          {...register('collegeAddress',{required:true})}
           placeholder="Address"
-          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          required
         />
       </div>
-
-
       <div className="mb-5">
         <label
-          htmlFor="mobile-text"
-          className="mb-3 block text-base font-medium text-[#07074D]"
+          className="mb-3 block text-base font-medium"
         >
         Mobile
         </label>
         <input
           type="text"
-          name="mobile-text"
-          id="mobile-text"
+          {...register('mobile',{required:true})}
           placeholder="Mobile"
-          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          required
         />
       </div>
-
-
       <div className="mb-5">
         <label
           htmlFor="website-text"
-          className="mb-3 block text-base font-medium text-[#07074D]"
+          className="mb-3 block text-base font-medium"
+          required
         >
        Website
         </label>
         <input
-          type="text"
-          name="website-text"
-          id="website-text"
+        type="text"
+          {...register('website',{required:true})}
           placeholder="Website"
-          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          required
         />
       </div>
-
-
       <div className="mb-5">
         <label
           htmlFor="email"
-          className="mb-3 block text-base font-medium text-[#07074D]"
+          className="mb-3 block text-base font-medium"
         >
           Email Address
         </label>
         <input
           type="email"
-          name="email"
-          id="email"
+          {...register('collegeEmail',{required:true})}
           placeholder="example@domain.com"
-          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+          required
         />
       </div>
-
-
-
-
-
-      <div>
-  <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
-          Submit
-        </button>
+      <div className='mb-5 flex text-xl items-center gap-2'>
+          <label>Is college AICTE affiliated ? </label>
+          <input {...register('aicte',{required:true})} className='h-5 w-5' type='radio' value={true}/> Yes
+          <input {...register('aicte',{required:true})} className='h-5 w-5' type='radio' value={false} /> No
+      </div>
+      <div className='mb-5 flex text-xl items-center gap-2'>
+          <label>Is college MHRD affiliated ? </label>
+          <input {...register('mhrd',{required:true})} className='h-5 w-5' type='radio' value={true}/> Yes
+          <input {...register('mhrd',{required:true})} className='h-5 w-5' type='radio' value={false} /> No
+      </div>
+    <div>
+      <button type='submit' disabled={loading} className="primary-btn disabled:bg-gray-400">
+          {loading ? "Prcessing Transaction..." : "Add College"}
+      </button>
       </div>
     </form>
   </div>
-</div>
-
-
-
-
-
-
-
-
+</div> 
     </div>
   )
 }
