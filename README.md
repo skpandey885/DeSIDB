@@ -39,5 +39,6 @@ So in order to address this issue and simplify everyone's life, we present to yo
 
 <h1>Credits: 🙇</h1>
 
-We are all ready now.💪<br>
+<br>
+We are all ready now.💪<br><br>
 <img src="welldone.jpg" style="align-items: center">
