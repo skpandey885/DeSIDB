@@ -5,7 +5,7 @@ import { AiFillCaretDown } from 'react-icons/ai'
 const StudentForm = () => {
     return (
         <div>
-            
+
             <>
                 {/* Container */}
                 <div className="container mx-auto">
@@ -234,14 +234,6 @@ const StudentForm = () => {
                                         </button>
                                     </div>
                                     <hr className="mb-6 border-t" />
-                                    <div className="text-center">
-                                        <a
-                                            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                                            href="#"
-                                        >
-                                            Forgot Password?
-                                        </a>
-                                    </div>
                                     <div className="text-center">
                                         <a
                                             className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
