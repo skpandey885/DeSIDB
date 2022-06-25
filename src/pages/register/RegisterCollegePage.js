@@ -11,7 +11,6 @@ const RegisterCollegePage = () => {
               Registering here makes your college to avail multiple benefits like Fellowships, Programs and Trainings.
             </p>
       </div>
-
       
      <div className="float-left md:pt-[80px] pl-[100px] register-sign">
      <img src="/assets/register.png" class="max-w-full h-auto" alt="..." />

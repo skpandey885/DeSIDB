@@ -1,253 +1,226 @@
 import React from 'react'
 
-import { AiFillCaretDown } from 'react-icons/ai'
+// import { AiFillCaretDown } from 'react-icons/ai'
 
 const StudentForm = () => {
     return (
         <div>
 
-            <>
-                {/* Container */}
-                <div className="container mx-auto">
-                    <div className="flex justify-center px-6 my-12">
-                        {/* Row */}
-                        <div className="w-full xl:w-3/4 lg:w-11/12 flex">
-                            {/* Col */}
-                            <div
-                                className="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-                                style={{
-                                    backgroundPosition: 0 - 240,
-                                    backgroundImage:
-                                        'url("https://cdn3d.iconscout.com/3d/premium/thumb/holding-book-girl-5083061-4444667.png")'
-                                }}
-                            />
-                            {/* Col */}
-                            <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-                                <h3 className="pt-4 text-2xl text-center">Sign Up Now!</h3>
+             
+            <div class="flow-root"> 
 
-                                <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+     <div className="float-left md:pt-[0px] pl-[-120px] register-sign">
+     <img src="/assets/register-student2.png" className="h-[80%] w-[80%]" alt="..." />
+     </div> 
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="firstName"
-                                            >
-                                                First Name
-                                            </label>
-                                            <input
-                                                className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="firstName"
-                                                type="text"
-                                                placeholder="First Name"
-                                            />
-                                        </div>
+   <div className="flex items-end justify-end py-[50px]">
+     
+  <div className="mx-auto w-full max-w-[550px]">
+  <form action="https://formbold.com/s/FORM_ID" method="POST">
 
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="lastName"
-                                            >
-                                                Last Name
-                                            </label>
-                                            <input
-                                                className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="lastName"
-                                                type="text"
-                                                placeholder="Last Name"
-                                            />
-                                        </div>
-                                    </div>
+      <div className="mb-5">
+       
+        <label
+          htmlFor="first-name"
+          className="mb-3  block text-base font-medium text-[#07074D]" >
+         First Name
+        </label>
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="fatherName"
-                                            >
-                                                Father's Name
-                                            </label>
-                                            <input
-                                                className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="fatherName"
-                                                type="text"
-                                                placeholder="Father's Name"
-                                            />
-                                        </div>
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="First Name"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
 
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="motherName"
-                                            >
-                                                Mother's Name
-                                            </label>
-                                            <input
-                                                className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="motherName"
-                                                type="text"
-                                                placeholder="Mother's Name"
-                                            />
-                                        </div>
-                                    </div>
+      <div className="mb-5">
+        <label
+          htmlFor="last-name"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+         Last Name
+        </label>
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder=" Last Name"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="gender"
-                                            >
-                                                Gender
-                                            </label>
-                                            <select
-                                                className="w-full px-12 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="gender"
-                                                placeholder="Father's Name"
-                                            >
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                            </select>
-                                        </div>
+      <div className="mb-5">
+        <label
+          htmlFor="father-name"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+        Father's Name
+        </label>
+        <input
+          type="text"
+          name="father-name"
+          id="father-name"
+          placeholder="Father's Name"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
 
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="dob"
-                                            >
-                                                Date of Birth
-                                            </label>
-                                            <input
-                                                className="w-full px-8 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="date"
-                                                type="date"
-                                                placeholder="Date"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <label
-                                            className="block mb-2 text-sm font-bold text-gray-700"
-                                            htmlFor="email"
-                                        >
-                                            Email
-                                        </label>
-                                        <input
-                                            className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                            id="email"
-                                            type="email"
-                                            placeholder="Email"
-                                        />
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <label
-                                            className="block mb-2 text-sm font-bold text-gray-700"
-                                            htmlFor="mobileNumber"
-                                        >
-                                            Phone Number
-                                        </label>
-                                        <input
-                                            className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                            id="mobileNumber"
-                                            type="text"
-                                            placeholder="Phone Number"
-                                        />
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="gender"
-                                            >
-                                                Country
-                                            </label>
-                                            <select
-                                                className="w-full px-12 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="gender"
-                                                placeholder="Father's Name"
-                                            >
-                                                <option value="Country1">Country 1</option>
-                                                <option value="Country2">Country 2</option>
-                                            </select>
-                                        </div>
-                                    </div>
+      <div className="mb-5">
+        <label
+          htmlFor="mother-name"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+         Mother's Name
+        </label>
+        <input
+          type="text"
+          name="mother-name"
+          id="mother-name"
+          placeholder=" Mother's Name"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
 
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="level"
-                                            >
-                                                Education Level
-                                            </label>
-                                            <select
-                                                className="w-full px-10 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="level"
-                                                type="text"
-                                                placeholder="Highest Qualification"
-                                            >
-                                                <option value="10">10th</option>
-                                                <option value="12">12th</option>
-                                            </select>
+      <div className="mb-5">
+        <label
+          htmlFor="gender"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+        Gender
+        </label>
+        <input
+          type="text"
+          name="gender"
+          id="gender"
+          placeholder="Gender"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
 
-                                        </div>
-                                        <div className="md:ml-2">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="course"
-                                            >
-                                                Course
-                                            </label>
-                                            <select
-                                                className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="course"
-                                                type="text"
-                                                placeholder="Courses"
-                                            >
-                                                <option id='BE/B.Tech- Bachelor of Technology'>BE/B.Tech- Bachelor of Technology</option>
-                                                <option id='B.Arch- Bachelor of Architecture'>B.Arch- Bachelor of Architecture</option>
-                                                <option id='BCA- Bachelor of Computer Applications'>BCA- Bachelor of Computer Applications</option>
-                                                <option id='B.Sc.- Information Technology'>B.Sc.- Information Technology</option>
-                                                <option id='B.Sc- Nursing'>B.Sc- Nursing</option>
-                                                <option id='BPharma- Bachelor of Pharmacy'>BPharma- Bachelor of Pharmacy</option>
-                                                <option id='B.Sc- Interior Design'>B.Sc- Interior Design</option>
-                                                <option id='BDS- Bachelor of Dental Surgery'>BDS- Bachelor of Dental Surgery</option>
-                                                <option id='Animation, Graphics and Multimedia'>Animation, Graphics and Multimedia</option>
-                                                <option id='B.Sc. – Nutrition & Dietetics'>B.Sc. – Nutrition & Dietetics</option>
-                                                <option id='BPT- Bachelor of Physiotherapy'>BPT- Bachelor of Physiotherapy</option>
-                                                <option id='B.Sc- Applied Geology'>B.Sc- Applied Geology</option>
-                                                <option id='BA/B.Sc. Liberal Arts'>BA/B.Sc. Liberal Arts</option>
-                                                <option id='B.Sc.- Physics'>B.Sc.- Physics</option>
-                                                <option id='B.Sc. Chemistry'>B.Sc. Chemistry</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="mb-6 text-center">
-                                        <button
-                                            className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                                            type="button"
-                                        >
-                                            Register Account
-                                        </button>
-                                    </div>
-                                    <hr className="mb-6 border-t" />
-                                    <div className="text-center">
-                                        <a
-                                            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                                            href="./index.html"
-                                        >
-                                            Already have an account? Login!
-                                        </a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </>
+
+      <div className="mb-5">
+        <label
+          htmlFor="dob"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+      Date Of Birth
+        </label>
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          placeholder="Date Of Birth"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
+
+
+      <div className="mb-5">
+        <label
+          htmlFor="email"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+          Email
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@domain.com"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
+     
+
+      <div className="mb-5">
+        <label
+          htmlFor="college-name"
+          className="mb-3 block text-base font-medium text-[#07074D]" >
+         College
+
+        </label>
+        <input
+          type="text"
+          name="college-name"
+          id="college-name"
+          placeholder="College"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+           />
+      </div>
+
+ 
+      <div className="mb-5">
+        <label
+          htmlFor="mobile-text"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+        Level
+        </label>
+      
+
+   
+
+
+
+      </div>
+
+
+
+
+
+      <div className="mb-5">
+        <label
+          htmlFor="mobile-text"
+          className="mb-3 block text-base font-medium text-[#07074D]"
+        >
+        Mobile
+        </label>
+        <input
+          type="text"
+          name="mobile-text"
+          id="mobile-text"
+          placeholder="Mobile"
+          className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+      </div>
+
+
+
+
+
+
+
+
+
+      <div>
+  <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+  
+
+
+
+
+
+
+
+
 
         </div>
     )
