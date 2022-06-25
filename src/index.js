@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
 import './index.css';
 import App from './pages/App';
 import BrowseCollegesPage from './pages/browse/BrowseCollegesPage';
@@ -12,9 +13,9 @@ import Footer from './components/layout/Footer';
 import Fellowship from './pages/others/Fellowship';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+root.render(<>  
   <BrowserRouter>
-    <Navbar />
+  <Navbar/>
     <Routes>
 
       <Route path='/' element={<App />} />
@@ -28,4 +29,5 @@ root.render(
     </Routes>
     <Footer />
   </BrowserRouter>
+</>
 );
