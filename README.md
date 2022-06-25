@@ -34,6 +34,7 @@ So in order to address this issue and simplify everyone's life, we present to yo
 <li>npm run start</li>
 <li>       </li>
 </ul>
+<img src="welldone.jpg">
 ---
 <h1>Illustrations from the project-</h1>
 
