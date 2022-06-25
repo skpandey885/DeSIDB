@@ -9,8 +9,8 @@ import RegisterCollegePage from './pages/register/RegisterCollegePage';
 import RegisterStudentPage from './pages/register/RegisterStudentPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import Fellowship from './pages/others/Fellowship';
-import About from './pages/About';
+import Fellowship from './pages/Others/Fellowship';
+import About from './pages/About'; 
 import { createClient, WagmiConfig } from 'wagmi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,7 +22,6 @@ root.render(
   <BrowserRouter>
   <Navbar/>
     <Routes>
-
       <Route path='/' element={<App />} />
       <Route path='/browse/students' element={<BrowseStudentPage />} />
       <Route path='/browse/colleges' element={<BrowseCollegesPage />} />
