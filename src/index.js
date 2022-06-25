@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { WagmiConfig,createClient } from 'wagmi';
 import Navbar from './components/layout/Navbar';
 import './index.css';
 import App from './pages/App';
@@ -11,7 +12,11 @@ import RegisterStudentPage from './pages/register/RegisterStudentPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<>  
+const client = createClient();
+
+root.render(
+  <>  
+  <WagmiConfig client={client}>
   <BrowserRouter>
   <Navbar/>
     <Routes>
@@ -23,5 +28,6 @@ root.render(<>
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
   </BrowserRouter>
+  </WagmiConfig>
 </>
 );
