@@ -11,9 +11,14 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Fellowship from './pages/others/Fellowship';
 import About from './pages/About';
+import { createClient, WagmiConfig } from 'wagmi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<>  
+const client = createClient();
+
+root.render(
+  <>  
+  <WagmiConfig client={client}>
   <BrowserRouter>
   <Navbar/>
     <Routes>
@@ -30,5 +35,6 @@ root.render(<>
     </Routes>
     <Footer />
   </BrowserRouter>
+  </WagmiConfig>
 </>
 );
