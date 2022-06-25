@@ -1,5 +1,5 @@
 import React from 'react'
-import Studentcard from '../../components/Collegecard'
+import Studentcard from '../../components/Studentcard'
 
 const BrowseStudentPage = () => {
   return (
