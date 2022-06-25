@@ -26,6 +26,26 @@ So in order to address this issue and simplify everyone's life, we present to yo
 <h2>Platform-</h2>
 <ul>
 <li>VSCode </li>
-<li>       </li>
+<li>GitHub</li>
+</ul>
+---
+<h2>Launch-</h2>
+<p> Our project has minimum hardware requirements i.e; it is responsive on all the mobile devices.
+<ul>
+<li>Run npm install</li>
+<li>npm run start</li>
 <li>       </li>
 </ul>
+---
+<h1>Illustrations from the project-</h1>
+
+
+
+
+
+
+---
+<h1>Credits: </h1>
+
+
+
