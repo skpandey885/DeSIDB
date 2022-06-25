@@ -12,6 +12,8 @@ import Footer from './components/layout/Footer';
 import Fellowship from './pages/others/Fellowship';
 import About from './pages/About';
 import { createClient, WagmiConfig } from 'wagmi';
+import {Toaster} from "react-hot-toast";
+
 import Training from './pages/others/Training';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,9 +23,9 @@ root.render(
   <>  
   <WagmiConfig client={client}>
   <BrowserRouter>
+  <Toaster  />
   <Navbar/>
     <Routes>
-
       <Route path='/' element={<App />} />
       <Route path='/browse/students' element={<BrowseStudentPage />} />
       <Route path='/browse/colleges' element={<BrowseCollegesPage />} />

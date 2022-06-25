@@ -2,27 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-select{
-    -webkit-appearance: listbox !important
-}
 
-
-.sidebar {
-  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
-}
-.nav-item,
-.navbar {
-  z-index: 10000;
-}
-@media  screen and (max-width:800px) {
-  .sidebar{
-    z-index: 10000000;
+@layer components {
+  .primary-btn {
+      @apply bg-blue-500 hover:bg-blue-400 text-white rounded px-4 py-2 duration-200 ease-in-out
+  }
+  .navlink {
+      @apply px-4 py-2 font-medium hover:bg-gray-100 rounded duration-200 ease-in-out
+  }
+  input[type='text'],input[type='email']{
+    @apply w-full rounded-md border ring-gray-300 ring-2 bg-white py-3 px-6 text-base font-medium  outline-none focus:ring-blue-500 focus:shadow-md
   }
 }
 
-.e-dlg-center-center, .e-quick-popup-wrapper.e-device{
-  z-index: 1000000 !important;
-}
+
+select{
+    -webkit-appearance: listbox !important
+} 
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -33,15 +29,6 @@ select{
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
-}
-
-@layer components {
-  .primary-btn {
-      @apply bg-blue-500 hover:bg-blue-400 text-white rounded px-4 py-2 duration-200 ease-in-out
-  }
-  .navlink {
-      @apply px-4 py-2 font-medium hover:bg-gray-100 rounded duration-200 ease-in-out
-  }
 }
 
 /* color-picker style 
