@@ -7,25 +7,25 @@ India is a country with a population of 6.8 crore students graduating each year.
 <br>
 So in order to address this issue and simplify everyone's life, we present to you our solution, an online portal <b><em>DeSiDB</em></b>: A Decentralized  Student Information Database, which enables organisations to access student information from their colleges, to provide them scholarships or to connect them with jobs matching to their skills.  
 <h1>Technologies: 🧠</h1>
-<h2>Languages-</h2>
+<h2>Languages ✍️</h2>
 <ul>
 <li>ReactJS</li>
 <li>Ethereum</li>
 <li>Solidity</li>
 <li>Web3.0</li>
 </ul>
-<h2>Libraries-</h2>
+<h2>Libraries 📚</h2>
 <ul>
 <li>       </li>
 <li>       </li>
 <li>       </li>
 </ul>
-<h2>Platform-</h2>
+<h2>Platform 🖥️</h2>
 <ul>
 <li>VSCode </li>
 <li>GitHub</li>
 </ul>
-<h2>Launch-</h2>
+<h2>Launch 😎</h2>
 <p> Our project has minimum hardware requirements i.e; it is responsive on all the mobile devices.
 <ul>
 <li>Run npm install</li>
@@ -39,5 +39,5 @@ So in order to address this issue and simplify everyone's life, we present to yo
 
 <h1>Credits: 🙇</h1>
 
-We are all done.<br>
+We are all ready now.💪<br>
 <img src="welldone.jpg" style="align-items: center">
