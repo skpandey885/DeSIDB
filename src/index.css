@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .primary-btn {
+      @apply bg-blue-500 hover:bg-blue-400 text-white rounded px-4 py-2 duration-200 ease-in-out
+  }
+  .navlink {
+      @apply px-4 py-2 font-medium hover:bg-gray-100 rounded duration-200 ease-in-out
+  }
+}

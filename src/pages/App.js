@@ -1,9 +1,12 @@
+import React from 'react'
+import HeroSection from '../components/homepage/HeroSection';
+import Navbar from '../components/layout/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <p className='text-4xl'>Desi Db</p>
-    </div>
+    <main>
+     <HeroSection/> 
+    </main>
   );
 }
 
