@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
 import './index.css';
 import App from './pages/App';
 import BrowseCollegesPage from './pages/browse/BrowseCollegesPage';
@@ -10,8 +11,9 @@ import RegisterStudentPage from './pages/register/RegisterStudentPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+root.render(<>  
   <BrowserRouter>
+  <Navbar/>
     <Routes>
       <Route path='/' element={<App/>} />
       <Route path='/browse/students' element={<BrowseStudentPage/>} />
@@ -21,4 +23,5 @@ root.render(
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
   </BrowserRouter>
+</>
 );
