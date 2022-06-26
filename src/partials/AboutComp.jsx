@@ -15,9 +15,9 @@ const AboutComp = () => {
                 <span className="absolute bottom-0 left-0"> </span>
                 <div className="relative px-16 mx-auto max-w-7xl">
                     <p className="font-medium tracking-wide text-blue-500 uppercase">
-                        OUR TEAM
+                        OUR 
                     </p>
-                    <h2 className="relative max-w-lg mt-5 mb-10 text-4xl font-semibold leading-tight lg:text-5xl">
+                    <h2 className="mt-1 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5  ">
                         Amazing Team of <br />
                         HackerWarriors
                     </h2>

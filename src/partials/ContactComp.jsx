@@ -11,7 +11,7 @@ const ContactComp = () => {
                         <div className="flex flex-wrap lg:justify-between -mx-4">
                             <div className="w-full ml-10 lg:w-1/2 xl:w-6/12 px-4">
                                 <div className="max-w-[570px] mb-12 lg:mb-0">
-                                    <span className="block mb-4 text-4xl text-primary font-semibold">
+                                    <span className="mt-1 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-300 mb-5 pb-5  ">
                                         Contact Us
                                     </span>
                                     <h2
@@ -20,9 +20,9 @@ const ContactComp = () => {
                                         mb-6
                                         uppercase
                                         font-bold
-                                        text-[32px]
+                                        text-[24px]
                                         sm:text-[40px]
-                                        lg:text-[36px]
+                                        lg:text-[24px]
                                         xl:text-[40px]
                                         "
                                     >
