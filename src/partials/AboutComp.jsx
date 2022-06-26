@@ -17,7 +17,7 @@ const AboutComp = () => {
                     <p className="font-medium tracking-wide text-blue-500 uppercase">
                         OUR 
                     </p>
-                    <h2 className="mt-1 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5  ">
+                    <h2 className="pb-5 mt-1 mb-5 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 ">
                         Amazing Team of <br />
                         HackerWarriors
                     </h2>
@@ -37,10 +37,10 @@ const AboutComp = () => {
                                     <p className="text-blue-600">Team Lead</p>
                                 </div>
                                 <div className="relative flex items-center justify-center space-x-3">
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://twitter.com/iamsachin_47" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsTwitter size={30} />
                                     </a>
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://github.com/skpandey885" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsGithub size={30} />
                                     </a>
                                 </div>
@@ -63,10 +63,10 @@ const AboutComp = () => {
 
                                 </div>
                                 <div className="relative flex items-center justify-center space-x-3">
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://twitter.com/adarshzpatel" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsTwitter size={30} />
                                     </a>
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href=" https://github.com/adarshzpatel" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsGithub size={30} />
                                     </a>
                                 </div>
@@ -87,10 +87,10 @@ const AboutComp = () => {
                                     <h3>Abhilasha Panda</h3>
                                 </div>
                                 <div className="relative flex items-center justify-center space-x-3">
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://twitter.com/_AbhilashaPanda" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsTwitter size={30} />
                                     </a>
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://github.com/Abhilasha6" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsGithub size={30} />
                                     </a>
                                 </div>
@@ -111,10 +111,10 @@ const AboutComp = () => {
                                     <h3>Mehul Puri</h3>
                                 </div>
                                 <div className="relative flex items-center justify-center space-x-3">
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://twitter.com/Fernblade1" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsTwitter size={30} />
                                     </a>
-                                    <a href="#_" className="text-gray-300 hover:text-gray-400">
+                                    <a href="https://github.com/mehulpuri/" target="_blank" className="text-gray-300 hover:text-gray-400">
                                         <BsGithub size={30} />
                                     </a>
                                 </div>
