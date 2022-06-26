@@ -60,10 +60,10 @@ const RegisterCollegePage = () => {
   return (
     <div class="px-4">
         <div className="ml-[150px] mt-10 register-college-text">
-           <p className="mt-1 text-4xl font-extrabold text-gray-900  sm:text-5xl sm:tracking-tight">
-              Register your college and Avail incremental benefits
+           <p className="mt-1 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5  ">
+              Register Your college and Avail Incremental Benefits
             </p>
-            <p className=" ml-[100px]  mt-5 text-xl text-gray-500">
+            <p className=" ml-[100px] text-xl  mt-5 text-md text-gray-500">
               Registering here makes your college to avail multiple benefits like Fellowships, Programs and Trainings.
             </p>
       </div>      

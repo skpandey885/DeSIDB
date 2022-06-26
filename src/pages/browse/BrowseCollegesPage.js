@@ -60,7 +60,7 @@ const BrowseCollegesPage = () => {
       </div>
         <div className="flex flex-wrap gap-8 py-8  ">
         {filterBy === 'name' && allColleges?.filter((data) => (data.collegeName).includes(query)).map(filteredCollege => <Collegecard key={filteredCollege.cid} data={filteredCollege} />)}
-        {filterBy === 'name' && allColleges?.filter((data) => (data?.cid.toString()).includes(query)).map(filteredCollege => <Collegecard keu={filteredCollege.cid} data={filteredCollege} />)}
+        {filterBy === 'id' && allColleges?.filter((data) => (data?.cid.toString()).includes(query)).map(filteredCollege => <Collegecard keu={filteredCollege.cid} data={filteredCollege} />)}
         </div>
     </div>
   )

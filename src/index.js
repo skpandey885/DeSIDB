@@ -17,6 +17,7 @@ import {Toaster} from "react-hot-toast";
 import Training from './pages/others/Training';
 import StudentDetail from './pages/StudentDetail';
 import Contact from './pages/Contact';
+import Terms from './components/Terms';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -39,7 +40,7 @@ root.render(
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
-
+      <Route path='/Terms' element= {<Terms />} />
       
       <Route path='/Contact' element={<Contact />} />  
       <Route path="/browse/students/:id" element={<StudentDetail />} />
