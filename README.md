@@ -38,7 +38,9 @@ So in order to address this issue and simplify everyone's life, we present to yo
 
 <h1>Illustrations from the project- ⛳</h1>
 
-![Demo](https://user-images.githubusercontent.com/76563079/175805376-bbef145a-f68d-4c25-94ab-238ba4dad08c.gif)
+![Demo](https://user-images.githubusercontent.com/76563079/175805516-99b91e1c-2cbb-44e2-b06f-f6c2f1117e22.gif)
+
+
 
 
 <h1>Credits: 🙇</h1>
