@@ -15,7 +15,7 @@ const Studentcard = ({ data }) => {
                             {/* Icon */}
 
                             <span className="text-xl font-bold leading-tight text-blue  ">
-                                UID : <span className='text-lg font-normal'>{data.sid.toString()}</span>
+                                UID : <span className='text-lg font-normal'>{data?.sid.toString()}</span>
                             </span>
                         </li>
                         <li className="flex space-x-3">
@@ -61,7 +61,7 @@ const Studentcard = ({ data }) => {
                     type="button"
                     className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
                 >
-                    <a href='https://soa.ac.in'>View Details</a>
+                    <a href='https://soa.ac.in'>View Details    </a>
                 </button>
                 </div>
             </Link>
