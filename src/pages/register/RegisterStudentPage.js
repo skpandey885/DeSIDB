@@ -127,7 +127,7 @@ const Student = () => {
                 <select {...register('gender')}>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
-                  <option value="Other">Female</option>
+                  <option value="Other">Other</option>
                 </select>
 
               </div>
@@ -207,7 +207,7 @@ const Student = () => {
                 </label>
                 <input
                   type="tel"
-                  pattern='^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
+                  // pattern='^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
                   {...register('mobile')}
                   placeholder="Mobile"
                   required
