@@ -28,6 +28,15 @@ const Footer = () => {
               </a>
             </div>
 
+            <div className="px-5 py-2">
+              <a
+                href="/Terms"
+                className="text-base leading-6 text-gray-500 hover:text-gray-900"
+              >
+                Terms
+              </a>
+            </div>
+
             
           </nav>
 

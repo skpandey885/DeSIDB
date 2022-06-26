@@ -52,7 +52,7 @@ const Student = () => {
   return (
     <div>
       <section className="h-auto px-12 pb-12">
-        <p className="mt-1 mb-8 text-3xl font-semibold border-b pb-4 text-gray-900  ">
+        <p className="font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5">
           Register Student Information
         </p>
         <div className='grid grid-cols-2 '>
