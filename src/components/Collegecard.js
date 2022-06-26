@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs'
 const Collegecard = ({data}) => {
     return (
         <div>
-            <div className="p-5  min-w-[320px] bg-white rounded-lg border shadow-md sm:p-8  ">
+            <div className="p-5  w-[320px] bg-white rounded-lg border shadow-md sm:p-8  ">
                 <div className="flex items-baseline text-gray-900 ">
                     <span className="text-3xl font-extrabold tracking-tight"> {data.collegeName} </span>
                 </div>
@@ -48,12 +48,12 @@ const Collegecard = ({data}) => {
 
 
                 </ul>
-                <button
+                <a target={"_blank"} href={data?.cid.website}
                     type="button"
-                    className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                    className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200  font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
                 >
-                    <a href='https://soa.ac.in'>Learn More</a>
-                </button>
+                Learn More
+                </a>
             </div>
 
         </div>

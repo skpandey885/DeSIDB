@@ -6,7 +6,7 @@ const Hero = () => {
         <div>
             <>
                 <section className="px-2 py-32 bg-white dark:bg-main-dark-bg md:px-0">
-                    <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
+                    <div className="container items-center max-w-screen-xl px-8 mx-auto xl:px-5">
                         <div className="flex flex-wrap items-center sm:-mx-3">
                             <div className="w-full md:w-1/2 md:px-3">
                                 <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
@@ -22,7 +22,7 @@ const Hero = () => {
                                     <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                                         <a
                                             href="/register/student"
-                                            className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-blue-500 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto"
+                                            className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-blue-500 rounded-md sm:mb-0 hover:bg-blue-700 sm:w-auto"
                                         >
                                             Get Started
                                         </a>
@@ -33,7 +33,7 @@ const Hero = () => {
                                 <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
                                     <img
                                         src="https://miro.medium.com/max/580/1*5AKv5i_omy24uvWcz64NpA.png"
-                                        className="" alt="..."
+                                        className="object-center object-cover h-full w-full" alt="..."
                                     />
                                 </div>
                             </div>
