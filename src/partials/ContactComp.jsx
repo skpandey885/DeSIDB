@@ -8,10 +8,10 @@ const ContactComp = () => {
                 {/* ====== Contact Section Start */}
                 <section className="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
                     <div className="container">
-                        <div className="flex flex-wrap lg:justify-between -mx-4">
-                            <div className="w-full ml-10 lg:w-1/2 xl:w-6/12 px-4">
+                        <div className="flex flex-wrap -mx-4 lg:justify-between">
+                            <div className="w-full px-4 ml-10 lg:w-1/2 xl:w-6/12">
                                 <div className="max-w-[570px] mb-12 lg:mb-0">
-                                    <span className="mt-1 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-300 mb-5 pb-5  ">
+                                    <span className="pb-5 mt-1 mb-5 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-300 ">
                                         Contact Us
                                     </span>
                                     <h2
@@ -28,11 +28,9 @@ const ContactComp = () => {
                                     >
                                         GET IN TOUCH WITH US
                                     </h2>
-                                    <p className="text-base text-body-color leading-relaxed mb-9">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                        eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                        adiqua minim veniam quis nostrud exercitation ullamco
-                                    </p>
+          <p className="text-base leading-relaxed text-body-color mb-9">
+          Please feel free to contact us with any questions you have about Ethereum integration, information smart contracts, or Rinkeby Test Network authentication. Furthermore, whatever features you might request will be considered.
+               </p>
                                     <div className="flex mb-8 max-w-[370px] w-full">
                                         <div
                                             className="
@@ -55,11 +53,11 @@ const ContactComp = () => {
                                         </div>
 
                                         <div className="w-full">
-                                            <h4 className="font-bold text-dark text-xl mb-1">
+                                            <h4 className="mb-1 text-xl font-bold text-dark">
                                                 Our Location
                                             </h4>
                                             <p className="text-base text-body-color">
-                                                99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                                               Jagamara, Khandagiri, Bhubaneshwar, Odisha (751030)
                                             </p>
                                         </div>
                                     </div>
@@ -84,11 +82,11 @@ const ContactComp = () => {
                                             <AiFillPhone size={40} />
                                         </div>
                                         <div className="w-full">
-                                            <h4 className="font-bold text-dark text-xl mb-1">
+                                            <h4 className="mb-1 text-xl font-bold text-dark">
                                                 Phone Number
                                             </h4>
                                             <p className="text-base text-body-color">
-                                                (+62)81 414 257 9980
+                                                (+91) 6205433167
                                             </p>
                                         </div>
                                     </div>
@@ -113,17 +111,17 @@ const ContactComp = () => {
                                             <AiTwotoneMail size={40} />
                                         </div>
                                         <div className="w-full">
-                                            <h4 className="font-bold text-dark text-xl mb-1">
+                                            <h4 className="mb-1 text-xl font-bold text-dark">
                                                 Email Address
                                             </h4>
-                                            <p className="text-base text-body-color">info@yourdomain.com</p>
+                                            <p className="text-base text-body-color">mail@desidb.com</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="w-full lg:w-1/2 xl:w-5/12 px-4 mr-10">
-                                <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
+                            <div className="w-full px-4 mr-10 lg:w-1/2 xl:w-5/12">
+                                <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
                                     <form>
                                         <div className="mb-6">
                                             <label
@@ -220,20 +218,10 @@ const ContactComp = () => {
                                             />
                                         </div>
                                         <div>
-                                            <button
-                                                type="submit"
-                                                className="
-                                                w-full
-                                                text-indigo-500
-                                                
-                                                bg-primary
-                                                rounded
-                                                border border-primary
-                                                p-3
-                                                transition
-                                                hover:bg-opacity-90
-                                                "
-                                            >
+                        <button
+                           type="submit"
+                      className="w-full p-3 text-indigo-500 transition border rounded bg-primary border-primary hover:bg-opacity-90"
+                            >
                                                 Send Message
                                             </button>
                                         </div>
