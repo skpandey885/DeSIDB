@@ -8,6 +8,7 @@ const BrowseCollegesPage = () => {
   const [loading, setLoading] = useState(false);
   const [allColleges, setAllColleges] = useState([]);
   const { data: signer } = useSigner();
+  const [query,setQuery] = useState('');
 
   const contract = useContract({
     addressOrName: CONTRACT_ADDRESS,
@@ -43,15 +44,14 @@ const BrowseCollegesPage = () => {
   }
 
   return (
-    <div className='min-h-screen px-6 py-4 '>
-      <h1 className='text-5xl ml-5 mb-20 font-semibold '>Browse Registered Colleges</h1>
-      <div className='ml-5'>
-        <div className="flex gap-6 flex-wrap -m-2">
-          {allColleges.map((data) => (
-            <Collegecard data={data} />
-          ))}
-        </div>
+    <div className='min-h-screen px-12 py-4 '>
+      <h1 className='text-5xl  mb-8 font-semibold '>Browse Registered Colleges</h1>
+      <div>
+        <input type="text" className='max-w-[300px]' placeholder='Search by name' value={query} onChange={(e)=>setQuery(e.target.value)}/>
       </div>
+        <div className="flex gap-6 flex-wrap pt-8">
+          {allColleges.filter((data) => data.collegeName.includes(query)).map(filteredCollege => <Collegecard data={filteredCollege} />)}
+        </div>
     </div>
   )
 }
