@@ -40,7 +40,12 @@ So in order to address this issue and simplify everyone's life, we present to yo
 
 
 
-<h1>Credits: 🙇</h1>
+<h1>Credits: </h1>
+<ul>
+<li> All team Members </li>
+<li> Faculty Coordinators </li>
+<li> Seniors </li>
+</ul>
 
 <br>
 We are all ready now.💪<br><br>
