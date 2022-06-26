@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useContract, useSigner } from 'wagmi'
 import Collegecard from '../../components/Collegecard'
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../../components/contract/contract';
+import Loader from '../../components/Loader';
 
 const BrowseCollegesPage = () => {
   const [loading,setLoading] = useState(false);  
@@ -38,7 +39,7 @@ const BrowseCollegesPage = () => {
   }
 
   if(loading){
-    return <div className='h-[90vh] w-screen flex items-center justify-center'>Loading...</div>
+    return <div className='h-[90vh] w-screen flex items-center justify-center'><Loader /></div>
   }
 
   return (
