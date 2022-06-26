@@ -28,14 +28,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="px-5 py-2">
-              <a
-                href="#"
-                className="text-base leading-6 text-gray-500 hover:text-gray-900"
-              >
-                Terms
-              </a>
-            </div>
+            
           </nav>
 
           <div className="flex justify-center mt-8 space-x-6">
