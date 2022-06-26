@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Studentcard = ({ data }) => {
     return (
         <div>
-            <Link to="/browse/students/studentDetail">
+            <Link to={`/browse/students/${data?.sid.toString()}`}>
                 <div className="p-5  w-[320px] bg-white rounded-lg border shadow-md sm:p-8  ">
                     <div className="flex items-baseline text-gray-900 ">
                         <span className="text-3xl font-extrabold tracking-tight"> {data.firstName +' ' +  data.lastName} </span>

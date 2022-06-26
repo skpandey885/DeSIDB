@@ -35,185 +35,131 @@ const StudentDetail = () => {
     
 
     return (
-    <div>
-        <>
-            {/* Container */}
-                <div className="container mx-auto">
-                    <div className="flex justify-center px-6 my-12">
-                        {/* Row */}
-                        <div className="w-full xl:w-3/4 lg:w-11/12 flex">
-                            {/* Col */}
-                            <div
-                                className="w-full h-auto bg-gray-400 hidden lg:block lg:w-4/12 bg-cover rounded-l-lg"
-                                style={{
-                                    backgroundPosition: 0 - 180,
-                                    backgroundImage:
-                                        'url("https://cdn3d.iconscout.com/3d/premium/thumb/holding-book-girl-5083061-4444667.png")'
-                                }}
-                            />
-                            {/* Col */}
-                            <div className="w-full lg:w-7/12 bg-white p-5 rounded-md lg:rounded-l-none">
-                                <h3 className=" ml-32  block p-4 text-2xl text-center text-white bg-blue-500  w-5/12 text-sm text-gray-900  rounded-lg border ">Student Info</h3>
+        <div>
+      <section className="h-auto px-12 pb-12">
+        <p className="mt-1 mb-8 text-3xl font-semibold border-b pb-4 text-gray-900  ">
+          Student Info 
+        </p>
+        <div className='grid grid-cols-3 '>
+          <div className='col-span-1'>
 
-                                <form className="px-24 pt-6 pb-8 mb-4 bg-white rounded">
+            <div className='grid grid-cols-2  gap-x-12 max-w-screen-md'>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="first-name"
+                  className="mb-3  block text-base font-semibold"
+                >
+                  First Name
+                </label>
+                <p className='bg-gray-100 p-1 rounded'>{data?.firstName}</p>
+            
+              </div>
 
-                                    <div className=" mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="firstName"
-                                            >
-                                                First Name
-                                            </label>
-                                            <span className="w-full px-10 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                                {'Ramesh'}
-                                            </span>
-                                        </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="last-name"
+                  className="mb-3 block text-base font-semibold"
+                >
+                  Last Name
+                </label>
+                <p className='bg-gray-100 p-1 rounded'>{data?.lastName}</p> 
+              </div>
 
-                                        <div className="mb-4 md:mr-2 md:mb-0 text-center">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="lastName"
-                                            >
-                                                Last Name
-                                            </label>
-                                            <span className="w-full text-center px-14 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                                {'Mundi'}
-                                            </span>
-                                        </div>
-                                    </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="father-name"
+                  className="mb-3 block text-base font-medium "
+                >
+                  Father's Name
+                </label>
+               <p className='bg-gray-100 p-1 rounded'>{data?.fatherName}</p>
+              </div>
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="fatherName"
-                                            >
-                                                Father's Name
-                                            </label>
-                                            <span className="w-full px-10 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                                {'Pitashree'}
-                                            </span>
-                                        </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="mother-name"
+                  className="mb-3 block text-base font-semibold "
+                >
+                  Mother's Name
+                </label>
+              <p className='bg-gray-100 p-1 rounded'>{data?.motherName}</p>
+              </div>
 
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="motherName"
-                                            >
-                                                Mother's Name
-                                            </label>
-                                            <span className="w-full px-14 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                            {'ammijan'}
-                                            </span>
-                                        </div>
-                                    </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="gender"
+                  className="mb-3 block text-base font-semibold "
+                >
+                  Gender
+                </label>
+                <p className='bg-gray-100 p-1 rounded'>{data?.gender}</p>
+              </div>
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="gender"
-                                            >
-                                                Gender
-                                            </label>
-                                            <span className="w-full px-14  py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                              {'Male'}  
-                                            </span>
-                                        </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="dob"
+                  className="mb-3 block text-base font-semibold"
+                >
+                  Date Of Birth
+                </label>
+                <p className='bg-gray-100 p-1 rounded'>{data?.dateOfBirth}</p>               
+              </div>
 
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="dob"
-                                            >
-                                                Date of Birth
-                                            </label>
-                                            <span className="w-full px-10 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                                {'22/03/2000'}
-                                            </span>
-                                        </div>
-                                    </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="email"
+                  className="mb-3 block text-base font-semibold "
+                >
+                  Email
+                </label>
+                <p className='bg-gray-100 p-1 rounded'>{data?.emailId}</p>           
+              </div>
 
-                                    <div className="mb-4 md:flex md:justify-between">
-                                    <div className="mb-4">
-                                        <label
-                                            className="block mb-2 text-sm font-bold text-gray-700"
-                                            htmlFor="email"
-                                        >
-                                            Email
-                                        </label>
-                                        <span className="w-full px-10 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                            {'random@gmail.com'}
-                                        </span>
-                                    </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="college-name"
+                  className="mb-3 block text-base font-semibold "
+                >
+                  College
+                </label>
+              <p className='bg-gray-100 p-1 rounded'>{data?.collegeName}</p>
+              </div>
+              <div className='mb-5 col-span-1'>
+                <label
+                  htmlFor="mobile-text"
+                  className="mb-3 block text-base font-semibold "
+                > Course </label>
+               <p className='bg-gray-100 p-1 rounded'>{data?.course}</p>
+              </div>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="mobile-text"
+                  className="mb-3 block text-base font-semibold "
+                >
+                  Level
+                </label>
+                <p className='bg-gray-100 p-1 rounded'>{data?.level}</p>
+              </div>
 
-                                    <div className="mb-4">
-                                        <label
-                                            className="block mb-2 text-sm font-bold text-gray-700"
-                                            htmlFor="mobileNumber"
-                                        >
-                                            Phone Number
-                                        </label>
-                                        <span className="w-full px-10 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                            {'9283938489'}
-                                        </span>
-                                    </div>
-                                    </div>
-
-                                    <div className="mb-4 md:flex md:justify-between">
-                                    <div className="mb-4">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="gender"
-                                            >
-                                                Country
-                                            </label>
-                                            <span className="w-full px-10 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="gender">
-                                                    {'India'}
-                                                </span>
-                                        </div>
-                                    </div>
-                                    
-                                    <div className="md:ml-2 relative right-10">
-                                            <label
-                                                className="text-center block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="course"
-                                            >
-                                                Course
-                                            </label>
-                                            <span className="w-full relative px-14 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                                {'BTech'}
-                                            </span>
-                                        </div> 
-                                        </div>
-
-                                    <div className="mb-4 md:flex md:justify-between">
-                                        <div className="mb-4 md:mr-2 md:mb-0">
-                                            <label
-                                                className="block mb-2 text-sm font-bold text-gray-700"
-                                                htmlFor="level"
-                                            >
-                                                Education Level
-                                            </label>
-                                            <span className="w-full px-10 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                                {'12th'}
-                                            </span>
-
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </>
+              <div className="mb-5 col-span-1">
+                <label
+                  htmlFor="mobile-text"
+                  className="mb-3 block text-base font-semibold"
+                >
+                  Mobile
+                </label>
+              <p className='bg-gray-100 p-1 rounded'>{data?.mobileNumber}</p>
+              </div>
+              
+            </div>
+            </div>
+          <div className='col-span-2 flex items-center justify-center '>
+            <img src="https://i.postimg.cc/3wPQjJFm/undraw-Scrum-board-re-wk7v.png" className="h-[500px]" alt="..." />
+          </div>
+        </div>
+      </section>
     </div>
-    
-  )
+    )
 }
 
 export default StudentDetail
