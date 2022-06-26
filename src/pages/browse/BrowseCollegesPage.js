@@ -49,7 +49,7 @@ const BrowseCollegesPage = () => {
       <div>
         <input type="text" className='max-w-[300px]' placeholder='Search by name' value={query} onChange={(e)=>setQuery(e.target.value)}/>
       </div>
-        <div className="flex gap-6 flex-wrap pt-8">
+        <div className="flex flex-wrap gap-8 py-8  ">
           {allColleges.filter((data) => data.collegeName.includes(query)).map(filteredCollege => <Collegecard data={filteredCollege} />)}
         </div>
     </div>
