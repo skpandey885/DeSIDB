@@ -18,6 +18,9 @@ import Training from './pages/others/Training';
 import StudentDetail from './pages/StudentDetail';
 import Contact from './pages/Contact';
 
+import StudentsId from './components/StudentsId';
+import CollegeId from './components/CollegeId';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const client = createClient({
   autoConnect:true
@@ -32,11 +35,11 @@ root.render(
     <Routes>
       <Route path='/' element={<App />} />
       <Route path='/browse/students' element={<BrowseStudentPage />} />
-      <Route path='/browse/students/id' element={<Training />} />
+      <Route path='/browse/students/id' element={<StudentsId />} />
       
 
       <Route path='/browse/colleges' element={<BrowseCollegesPage />} />
-      <Route path='/browse/colleges/id' element={<Training />} />
+      <Route path='/browse/colleges/id' element={<CollegeId />} />
       
       <Route path='/register/student' element={<RegisterStudentPage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />

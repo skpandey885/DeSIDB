@@ -50,7 +50,7 @@ const BrowseStudentPage = () => {
         <input type="text" className='max-w-[300px]' placeholder='Search by name' value={query} onChange={(e)=>setQuery(e.target.value)}/>
       </div>
       <div className="flex flex-wrap gap-8 py-8  ">
-        {allStudents.filter((data) => data.firstName.includes(query)).map(filteredStudent => <Studentcard data={filteredStudent} />)}
+        {allStudents.filter((data) => (data.firstName+" "+ data.lastName).includes(query)).map(filteredStudent => <Studentcard data={filteredStudent} />)}
       </div>
     </div>
 
