@@ -46,7 +46,7 @@ const BrowseCollegesPage = () => {
 
   return (
     <div className='min-h-screen px-12 py-4 '>
-      <h1 className='text-5xl  mb-8 font-semibold '>Browse Registered Colleges</h1>
+      <h1 className="mt-1 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5  ">Browse Registered Colleges</h1>
       <div className='flex gap-4'>
         <input type="text" className='max-w-[300px]' placeholder='Search by name' value={query} onChange={(e)=>setQuery(e.target.value)}/> 
         <label className='flex items-center gap-4'>

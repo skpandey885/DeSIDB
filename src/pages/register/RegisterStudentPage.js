@@ -207,7 +207,7 @@ const Student = () => {
                 </label>
                 <input
                   type="tel"
-                  pattern='^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
+                  pattern='^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$'
                   {...register('mobile')}
                   placeholder="Mobile"
                   required

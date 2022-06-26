@@ -8,7 +8,7 @@ const Terms = () => {
                 <section className="relative py-16 bg-white min-w-screen animation-fade animation-delay">
                     <div className="container px-0 px-8 mx-auto sm:px-12 xl:px-5">
                         
-                        <h3 className="mt-1 text-2xl font-bold text-left text-gray-800 sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center sm:mx-0">
+                        <h3 className="mt-1 text-4xl justify-center text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400 mb-5 pb-5  ">
                             Terms and Conditions
                         </h3>
 
