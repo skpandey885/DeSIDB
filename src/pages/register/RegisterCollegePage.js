@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import {useForm} from 'react-hook-form'
 import toast from 'react-hot-toast';
 import { useContract, useSigner } from 'wagmi';
+import ButtonLoader from '../../components/ButtonLoader';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../../components/contract/contract';
 
 const RegisterCollegePage = () => {
@@ -154,7 +155,7 @@ const RegisterCollegePage = () => {
       </div>
     <div>
       <button type='submit' disabled={loading} className="primary-btn disabled:bg-gray-400">
-          {loading ? "Prcessing Transaction..." : "Add College"}
+          {loading ? <ButtonLoader /> : "Add College"}
       </button>
       </div>
     </form>
