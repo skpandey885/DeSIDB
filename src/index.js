@@ -17,9 +17,13 @@ import {Toaster} from "react-hot-toast";
 import Training from './pages/others/Training';
 import StudentDetail from './pages/StudentDetail';
 import Contact from './pages/Contact';
+import Terms from './components/Terms';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const client = createClient();
+const client = createClient({
+  autoConnect:true
+});
 
 root.render(
   <>  
@@ -36,9 +40,12 @@ root.render(
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
+      <Route path='/Terms' element= {<Terms />} />
+      
       <Route path='/Contact' element={<Contact />} />  
-      <Route path="/browse/students/studentDetail" element={<StudentDetail />} />
-      <Route path='/About' element={<About />} />
+      <Route path="/browse/students/:id" element={<StudentDetail />} />
+      <Route path='/About' element={<About />} /
+      >
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
     <Footer />
