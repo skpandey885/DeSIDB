@@ -154,7 +154,7 @@ const RegisterCollegePage = () => {
       </div>
     <div>
       <button type='submit' disabled={loading} className="primary-btn disabled:bg-gray-400">
-          {loading ? "Prcessing Transaction..." : "Add College"}
+          {loading ? "Processing Transaction..." : "Register College"}
       </button>
       </div>
     </form>

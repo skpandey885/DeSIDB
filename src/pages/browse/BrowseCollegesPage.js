@@ -46,7 +46,7 @@ const BrowseCollegesPage = () => {
       <h1 className='text-3xl mb-4 font-semibold'>Browse Registered Colleges</h1>
       <div className='flex'>
       {allColleges.map((data)=>(
-        <Collegecard data={data}/>
+        <Collegecard key={data.id.toString()} data={data}/>
       ))}
         </div>
     </div>

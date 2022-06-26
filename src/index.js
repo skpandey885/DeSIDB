@@ -17,7 +17,9 @@ import {Toaster} from "react-hot-toast";
 import Training from './pages/others/Training';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const client = createClient();
+const client = createClient({
+  autoConnect:true
+});
 
 root.render(
   <>  
