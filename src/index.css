@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+@layer base{
+  html{
+    @apply font-sora
+  }
+}
 @layer components {
   .primary-btn {
       @apply bg-blue-500 hover:bg-blue-400 text-white rounded px-4 py-2 duration-200 ease-in-out
@@ -11,7 +16,7 @@
       @apply px-4 py-2 font-medium hover:bg-gray-100 rounded duration-200 ease-in-out
   }
   select,option,input[type='text'],input[type='email'],input[type='date'], input[type='tel'], input[type='number']{
-    @apply w-full rounded-md border ring-gray-300 ring-2 bg-white py-2 px-4 text-base font-medium  outline-none focus:ring-blue-500 focus:shadow-md
+    @apply w-full rounded-md border ring-gray-200 ring-1 bg-white py-2 px-4 text-base font-medium  outline-none focus:ring-blue-500 focus:shadow-md
   }
 }
 

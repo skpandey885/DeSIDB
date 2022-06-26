@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs'
 const Collegecard = ({data}) => {
     return (
         <div>
-            <div className="p-5  min-w-[320px] bg-white rounded-lg border shadow-md sm:p-8  ">
+            <div className="p-5  w-[320px] bg-white rounded-lg border shadow-md sm:p-8  ">
                 <div className="flex items-baseline text-gray-900 ">
                     <span className="text-3xl font-extrabold tracking-tight"> {data.collegeName} </span>
                 </div>

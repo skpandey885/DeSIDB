@@ -32,7 +32,7 @@ const Training = () => {
                                  This course teaches you about gathering valuable information about web sites, people, email id and images.
                                   Cyber crimes have been rapidly increasing, this course will give you a glimpse, how easy it is for hackers to hack into our devices.
                                 </p>
-                                <a href='https://free.aicte-india.org/VirtualCyberLabs8.php' className="text-indigo-500 inline-flex items-center mt-4">
+                                <a href='https://free.aicte-india.org/VirtualCyberLabs8.php' className="text-blue-500 inline-flex items-center mt-4">
                                     <span className='pr-5'>Learn More</span>
                                     <BsArrowRight size={20} />
                                 </a>
@@ -61,7 +61,7 @@ const Training = () => {
                                 <p className="leading-relaxed">
                                 SEO stands for search engine optimization. The process of improving your website to increase visibility on search engines. When people search any products or services related to your business.
                                 </p>
-                                <a href='https://free.aicte-india.org/SRPM_Management_Services.php' className="text-indigo-500 inline-flex items-center mt-4">
+                                <a href='https://free.aicte-india.org/SRPM_Management_Services.php' className="text-blue-500 inline-flex items-center mt-4">
                                     <span className='pr-5'>Learn More</span>
                                     <BsArrowRight size={20} />
                                 </a>
@@ -91,7 +91,7 @@ const Training = () => {
                                 <p className="leading-relaxed">
                                 Learn the basics and fundamentals of C Programming which is essential to understand computer internal architecture and softwares development. This is a beginner friendly course designed and it's great to add in your resume. A simple but yet more powerful language with various probabilities to discover.
                                 </p>
-                                <a href='https://free.aicte-india.org/VirtualCyberLabs1.php' className="text-indigo-500 inline-flex items-center mt-4">
+                                <a href='https://free.aicte-india.org/VirtualCyberLabs1.php' className="text-blue-500 inline-flex items-center mt-4">
                                     <span className='pr-5'>Learn More</span>
                                     <BsArrowRight size={20} />
                                 </a>
@@ -120,7 +120,7 @@ const Training = () => {
                                 <p className="leading-relaxed">
                                 BCOS-184 is one of the Skill Enhancement (4 credits) elective courses that falls under 4th Semester of B.Com (G) programme offered under CBCS scheme. The main objective of this course is to familiarize the learners with the knowledge and understanding of E-commerce. This course by and large makes learners acquainted with the contemporary ways of doing business and emphasizes more on internet based business and their set-up. The entire 15 units have been bifurcated into 5 blocks.
                                 </p>
-                                <a href='https://onlinecourses.swayam2.ac.in/nou22_cm20/preview' className="text-indigo-500 inline-flex items-center mt-4">
+                                <a href='https://onlinecourses.swayam2.ac.in/nou22_cm20/preview' className="text-blue-500 inline-flex items-center mt-4">
                                     <span className='pr-5'>Learn More</span>
                                     <BsArrowRight size={20} />
                                 </a>
@@ -149,7 +149,7 @@ const Training = () => {
                                 <p className="leading-relaxed">
                                 Initially the course introduces various automated systems being used in the manufacturing industry. Then the building blocks of a typical automated system are described. It presents a study on the principle of operation and construction details of sensors/transducers, actuators, drives and mechanisms, hydraulic and pneumatic systems. It also covers up the microprocessor technology, programming and CNC technology. 
                                 </p>
-                                <a href='https://onlinecourses.nptel.ac.in/noc22_me123/preview' className="text-indigo-500 inline-flex items-center mt-4">
+                                <a href='https://onlinecourses.nptel.ac.in/noc22_me123/preview' className="text-blue-500 inline-flex items-center mt-4">
                                     <span className='pr-5'>Learn More</span>
                                     <BsArrowRight size={20} />
                                 </a>

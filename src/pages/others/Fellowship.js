@@ -23,7 +23,7 @@ const Fellowship = () => {
 
             <div className="p-2 lg:w-1/2">
               <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-12 pb-12 rounded-lg overflow-hidden text-center relative">
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-indigo-500 mb-3">
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-blue-500 mb-3">
                   AICTE POST GRADUATE (PG) SCHOLARSHIP
                 </h1>
                 <p className="leading-relaxed mb-3">
@@ -37,7 +37,7 @@ const Fellowship = () => {
 
             <div className="p-2 lg:w-1/2">
               <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-12 pb-12 rounded-lg overflow-hidden text-center relative">
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-indigo-500 mb-3">
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-blue-500 mb-3">
                 AICTE DOCTORAL FELLOWSHIP (ADF)
                 </h1>
                 <p className="leading-relaxed mb-3">
@@ -51,7 +51,7 @@ const Fellowship = () => {
 
             <div className="p-2 lg:w-1/2">
               <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-12 pb-12 rounded-lg overflow-hidden text-center relative">
-                <h1 className="title-font sm:text-2xl text-base	 font-medium text-indigo-500 mb-3">
+                <h1 className="title-font sm:text-2xl text-base	 font-medium text-blue-500 mb-3">
                 AICTE PRAGATI SCHOLARSHIP FOR MERITORIOUS GIRL STUDENTS
                 </h1>
                 <p className="leading-relaxed mb-3">
@@ -65,7 +65,7 @@ const Fellowship = () => {
 
             <div className="p-2 lg:w-1/2">
               <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-12 pb-12 rounded-lg overflow-hidden text-center relative">
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-indigo-500 mb-3">
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-blue-500 mb-3">
                 AICTE SAKSHAM SCHOLARSHIP FOR SPECIALLY ABLED STUDENTS
                 </h1>
                 <p className="leading-relaxed mb-3">
@@ -79,7 +79,7 @@ const Fellowship = () => {
 
             <div className="p-2 lg:w-1/2">
               <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-12 pb-12 rounded-lg overflow-hidden text-center relative">
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-indigo-500 mb-3">
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-blue-500 mb-3">
                 AICTE – SWANATH SCHOLARSHIP SCHEME
                 </h1>
                 <p className="leading-relaxed mb-3">
@@ -93,7 +93,7 @@ const Fellowship = () => {
 
             <div className="p-2 lg:w-1/2">
               <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-12 pb-12 rounded-lg overflow-hidden text-center relative">
-                <h1 className="title-font sm:text-2xl text-xl font-medium text-indigo-500 mb-3">
+                <h1 className="title-font sm:text-2xl text-xl font-medium text-blue-500 mb-3">
                 AICTE - (YUVAK)
                 </h1>
                 <p className="leading-relaxed mb-3">
