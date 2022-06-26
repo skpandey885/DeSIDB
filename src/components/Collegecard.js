@@ -6,7 +6,7 @@ const Collegecard = ({data}) => {
         <div>
             <div className="p-5  min-w-[320px] bg-white rounded-lg border shadow-md sm:p-8  ">
                 <div className="flex items-baseline text-gray-900 ">
-                    <span className="text-5xl font-extrabold tracking-tight"> {data.collegeName} </span>
+                    <span className="text-3xl font-extrabold tracking-tight"> {data.collegeName} </span>
                 </div>
                 {/* List */}
                 <ul role="list" className="my-7 space-y-5">

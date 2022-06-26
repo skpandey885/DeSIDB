@@ -32,12 +32,19 @@ root.render(
     <Routes>
       <Route path='/' element={<App />} />
       <Route path='/browse/students' element={<BrowseStudentPage />} />
+      <Route path='/browse/students/id' element={<Training />} />
+      
+
       <Route path='/browse/colleges' element={<BrowseCollegesPage />} />
+      <Route path='/browse/colleges/id' element={<Training />} />
+      
       <Route path='/register/student' element={<RegisterStudentPage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
+
+      
       <Route path='/Contact' element={<Contact />} />  
       <Route path="/browse/students/studentDetail" element={<StudentDetail />} />
       <Route path='/About' element={<About />} />

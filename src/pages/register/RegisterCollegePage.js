@@ -108,7 +108,8 @@ const RegisterCollegePage = () => {
         Mobile
         </label>
         <input
-          type="text"
+          type="tel"
+          pattern='^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
           {...register('mobile',{required:true})}
           placeholder="Mobile"
           required
@@ -155,7 +156,7 @@ const RegisterCollegePage = () => {
       </div>
     <div>
       <button type='submit' disabled={loading} className="primary-btn disabled:bg-gray-400">
-          {loading ? "Processing Transaction..." : "Register College"}
+          {loading ? <ButtonLoader /> : "Add College"}
       </button>
       </div>
     </form>
