@@ -35,7 +35,7 @@ const Student = () => {
     setLoading(true);
     try{
       console.log(data);
-      const registerTx = await contract.registerStudent(data.firstName,data.lastName,data.fatherName,data.motherName,data.gender,data.dob,data.email,data.collegeName,data.course,data.level,data.mobile);
+      const registerTx = await contract.registerStudent(data.firstName,data.lastName,data.fatherName,data.motherName,data.gender,data.dob,data.email,data.collegeName,data.level,data.course,data.mobile);
       await registerTx.wait();
       toast.success("Student registered successfully!");
       console.log(registerTx); 

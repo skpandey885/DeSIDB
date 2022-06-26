@@ -161,7 +161,7 @@ const RegisterCollegePage = () => {
       </div>
     </form>
   </div>
-</div> 
+  </div> 
     </div>
   )
 }
