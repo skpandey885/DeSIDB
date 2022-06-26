@@ -52,18 +52,18 @@ const Student = () => {
   return (
     <div>
       <section className="h-auto px-12 pb-12">
-        <p className="font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5">
+        <p className="pb-5 mb-5 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100">
           Register Student Information
         </p>
         <div className='grid grid-cols-2 '>
           <form className='col-span-1' onSubmit={handleSubmit(registerStudent)}>
 
-            <div className='grid grid-cols-2 gap-x-12 max-w-screen-md'>
+            <div className='grid max-w-screen-md grid-cols-2 gap-x-12'>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="first-name"
-                  className="mb-3 block text-base font-medium"
+                  className="block mb-3 text-base font-medium"
                 >
                   First Name
                 </label>
@@ -75,10 +75,10 @@ const Student = () => {
                 />
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="last-name"
-                  className="mb-3 block text-base font-medium"
+                  className="block mb-3 text-base font-medium"
                 >
                   Last Name
                 </label>
@@ -89,10 +89,10 @@ const Student = () => {
                 />
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="father-name"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 >
                   Father's Name
                 </label>
@@ -103,10 +103,10 @@ const Student = () => {
                 />
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="mother-name"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 >
                   Mother's Name
                 </label>
@@ -117,25 +117,25 @@ const Student = () => {
                 />
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="gender"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 >
                   Gender
                 </label>
                 <select {...register('gender')}>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
-                  <option value="Other">Female</option>
+                  <option value="Other">Other</option>
                 </select>
 
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="dob"
-                  className="mb-3 block text-base font-medium"
+                  className="block mb-3 text-base font-medium"
                 >
                   Date Of Birth
                 </label>
@@ -146,10 +146,10 @@ const Student = () => {
                 />
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="email"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 >
                   Email
                 </label>
@@ -160,10 +160,10 @@ const Student = () => {
                 />
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="college-name"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 >
                   College
                 </label>
@@ -173,10 +173,10 @@ const Student = () => {
                   placeholder="College"
                 />
               </div>
-              <div className='mb-5 col-span-1'>
+              <div className='col-span-1 mb-5'>
                 <label
                   htmlFor="mobile-text"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 > Course </label>
                 <select {...register('course')}>
                   {courses.map((course, i) => (
@@ -184,10 +184,10 @@ const Student = () => {
                   ))}
                 </select>
               </div>
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="mobile-text"
-                  className="mb-3 block text-base font-medium "
+                  className="block mb-3 text-base font-medium "
                 >
                   Level
                 </label>
@@ -198,10 +198,10 @@ const Student = () => {
                 </select>
               </div>
 
-              <div className="mb-5 col-span-1">
+              <div className="col-span-1 mb-5">
                 <label
                   htmlFor="mobile-text"
-                  className="mb-3 block text-base font-medium"
+                  className="block mb-3 text-base font-medium"
                 >
                   Mobile
                 </label>
@@ -214,7 +214,7 @@ const Student = () => {
                 />
               </div>
               <div className='col-span-2'>
-                <button type='submit' disabled={loading} className="primary-btn disabled:bg-gray-400 px-10">
+                <button type='submit' disabled={loading} className="px-10 primary-btn disabled:bg-gray-400">
                   {loading ? "Processing Transaction..." : "Register Student "}
                 </button>
               </div>
