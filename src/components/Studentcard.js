@@ -15,7 +15,7 @@ const Studentcard = ({ data }) => {
                             {/* Icon */}
 
                             <span className="text-xl font-bold leading-tight text-blue  ">
-                                UID : <span className='text-lg font-normal'>{data?.sid.toString()}</span>
+                                UID : <span className='text-lg font-normal'>{data.sid.toString()}</span>
                             </span>
                         </li>
                         <li className="flex space-x-3">
