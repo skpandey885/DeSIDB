@@ -12,13 +12,16 @@ So in order to address this issue and simplify everyone's life, we present to yo
 <li>ReactJS</li>
 <li>Ethereum</li>
 <li>Solidity</li>
-<li>Web3.0</li>
+<li>Infura API</li>
+<li>MetaMask</li>
 </ul>
 <h2>Libraries 📚</h2>
 <ul>
-<li>       </li>
-<li>       </li>
-<li>       </li>
+<li>wagmi</li>
+<li>Web3.0</li>
+<li>Truffle</li>
+<li>npm</li>
+<li>Tailwind CSS</li>
 </ul>
 <h2>Platform 🖥️</h2>
 <ul>
