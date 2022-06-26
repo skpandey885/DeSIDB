@@ -5,7 +5,6 @@ const Hero = () => {
     return (
         <div>
             <>
- {/* Section 1 */}
                 <section className="px-2 py-32 bg-white dark:bg-main-dark-bg md:px-0">
                     <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
                         <div className="flex flex-wrap items-center sm:-mx-3">

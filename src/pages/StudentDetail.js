@@ -1,10 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { useContract, useSigner } from 'wagmi';
+import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../components/contract/contract';
 
 const StudentDetail = () => {
-  return (
+    const [data,setData] = useState();
+    let params = useParams();
+    const id = params.id;
+
+    const  {data:signer } = useSigner();
+
+    const contract = useContract({
+        addressOrName: CONTRACT_ADDRESS,
+        contractInterface: CONTRACT_ABI,
+        signerOrProvider:signer
+      })
+      
+
+    const getStudentData = async () =>{
+        try{
+                const _data = await contract.getStudentByID(id);
+                console.log(_data); 
+                setData(_data);
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+     if(signer){
+        getStudentData();
+     } 
+    }, [signer])
+    
+
+    return (
     <div>
         <>
-                {/* Container */}
+            {/* Container */}
                 <div className="container mx-auto">
                     <div className="flex justify-center px-6 my-12">
                         {/* Row */}

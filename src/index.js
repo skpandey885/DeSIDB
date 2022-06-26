@@ -39,8 +39,9 @@ root.render(
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
       <Route path='/Contact' element={<Contact />} />  
-      <Route path="/browse/students/studentDetail" element={<StudentDetail />} />
-      <Route path='/About' element={<About />} />
+      <Route path="/browse/students/:id" element={<StudentDetail />} />
+      <Route path='/About' element={<About />} /
+      >
       {/* Pending : Individual pages to display single student or college */}
     </Routes>
     <Footer />
