@@ -1,13 +1,14 @@
-# TeamDEV - <img src="Logo.png" width="30px" height="30px"> DeSIDB 
+# <img src="Logo.png" width="30px" height="30px"> DeSIDB 
 
 <h1> Introduction - </h1> 
 
-India is a country with a population of 6.8 crore students graduating each year. Every year this huge mass of graduate students goes on a scavenger hunt to find their dream jobs. AICTE and MHRD intend to track students and colleges in order to aid operations such as student identification, AICTE certified college tracking, and provision of fellowships, awards, and training. But due to this large number, manually tracking the students and directing them to a suitable job becomes a <b>tedious</b> as well as <b>error-prone</b> process. As a result, matching jobs to a student's skills and conversely becomes very cumbersome process. 
+India is a country with a population of 6.8 crore students graduating each year. Every year this huge mass of graduate students goes on a scavenger hunt to find their dream jobs. <b>AICTE</b> and <b>MHRD</b> intend to track students and colleges in order to aid operations such as student identification, AICTE certified college tracking, and provision of fellowships, awards, and training. But due to this large number, manually tracking the students and directing them to a suitable job becomes a <b>tedious</b> as well as <b>error-prone</b> process. As a result, provision of trainings, fellowships to a student becomes very cumbersome process. 
+
 <br>
-So in order to address this issue and simplify everyone's life, we present to you our solution, an online portal <b><em>DeSiDB</em></b>: A Decentralized  Student Information Database, which enables organisations to access student information from their colleges, to provide them scholarships or to connect them with jobs matching to their skills.  
+So in order to address this issue and simplify everyone's life, we present to you our solution, an online portal <b><em>DeSIDB</em></b>: A Decentralized  Student Information Database, which enables organisations to access student information, to provide them fellowships, programs or to connect them with jobs matching to their skills. DeSIDB also enables organisations to perform <b>college-based tracking</b> or <b>id-based tracking</b>.
 
 Link: https://desidb885.netlify.app/
-<h1>Technologies: 🧠</h1>
+<h1>Technologies: 🧠 </h1>
 <h2>Languages ✍️</h2>
 <ul>
 <li>ReactJS</li>
