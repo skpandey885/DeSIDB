@@ -77,5 +77,10 @@ Our Seniors
 <li> Our College Faculties & Teachers </li>
 </ul>
 <hr>
+<ul>
+<li> <b>Note - The project is in development stage, and we are open to new suggestions and feedbacks.</b> <br> </li>
+<li> <b>For any feature Requests, Bug Fixes or Improvments, Please mail @ <a href="mailto:skpandey885@gmail.com ">skpandey885@gmail.com </a></b> </li>
+</ul>
+<hr>
 We are all ready now 💪<br><br>
 <img src="welldone.jpg" style="align-items: center">
