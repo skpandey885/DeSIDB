@@ -67,7 +67,7 @@ npm run start
   
   
   <a href="https://github.com/Abhilasha6" target="_blank" rel="noreferrer">Abhilasha Panda</a> <br>
-   <a href="https://github.com/adarshzpatel" target="_blank" rel="noreferrer">Adarsh Raj Patel</a> <br>
+   <a href="https://github.com/adarshzpatel" target="_blank" rel="noreferrer">Adarsh Patel</a> <br>
   <a href="https://github.com/mehulpuri" target="_blank" rel="noreferrer">Mehul Puri</a><br>
   <a href="https://github.com/skpandey885" target="_blank" rel="noreferrer">Sachin Pandey</a>
  </li>
