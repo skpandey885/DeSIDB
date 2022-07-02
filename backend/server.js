@@ -2,13 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const Router = require("./routes")
-
+const cors = require('cors')
 const app = express();
 
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.json());
+app.use(cors());
 
 const username = "admin-meh";
 const password = "xfyuqfHXQps97z6";
