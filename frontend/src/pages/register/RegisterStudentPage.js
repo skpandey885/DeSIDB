@@ -59,15 +59,6 @@ const Student = () => {
 
 
 
-
-
-
-
-
-
-
-
-
   const contract = useContract({
     addressOrName: CONTRACT_ADDRESS,
     contractInterface: CONTRACT_ABI,

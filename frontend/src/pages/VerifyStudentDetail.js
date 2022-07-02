@@ -3,9 +3,29 @@ import { useLocation, useParams } from 'react-router-dom'
 import { useContract, useSigner } from 'wagmi';
 import axios from 'axios'
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../components/contract/contract';
+import moment from 'moment';
 
+const courses = [
+    'B.Tech',
+    'B.Arch',
+    'BCA',
+    'B.Sc',
+    'B.Pharma',
+    'BDS',
+    'BPT',
+    'B.A'
+  ]
+
+  const level = [
+    'Higher Secondary',
+    'Bachelors',
+    'Masters',
+    'Doctorate'
+  ]
 
 const VerifyStudentDetail = () => {
+    const [state, setState] = useState();
+    const [date, setDate] = useState();
     const [data,setData] = useState();
     let params = useParams();
     const id = params.id;
@@ -21,15 +41,23 @@ const VerifyStudentDetail = () => {
       useEffect(() => {
         if(signer){
            getStudents();
+           dateFunc();  
         } 
        }, [signer])
 
     const location = useLocation();
 
     const getStudents = async () => {
-        const data = location.state;
+        const data = await location.state;
         setData(data);
         console.log(data);
+    }
+
+    const dateFunc = async () => {
+        const isoDate = await data.dob;
+        const newDate = moment.utc(isoDate).format("MMM Do, YYYY");
+        setDate(newDate);
+        console.log(newDate);
     }
 
     
@@ -41,7 +69,7 @@ const VerifyStudentDetail = () => {
     return (
         <div>
       <section className="h-auto px-12 pb-12">
-        <p className="mt-1 mb-8 text-3xl font-semibold border-b pb-4 text-gray-900  ">
+        <p  className="mt-1 mb-8 text-3xl font-semibold border-b pb-4 text-gray-900  ">
           Student Info 
         </p>
         <div className='grid grid-cols-3 '>
@@ -55,7 +83,7 @@ const VerifyStudentDetail = () => {
                 >
                   First Name
                 </label>
-                <p className='bg-gray-100 p-1 rounded'>{data?.fname}</p>
+                <input defaultValue={data?.fname}  type="text" className='bg-gray-100 p-1 rounded'  />
             
               </div>
 
@@ -66,7 +94,7 @@ const VerifyStudentDetail = () => {
                 >
                   Last Name
                 </label>
-                <p className='bg-gray-100 p-1 rounded'>{data?.lname}</p> 
+                <input defaultValue={data?.lname} type="text" className='bg-gray-100 p-1 rounded' />
               </div>
 
               <div className="mb-5 col-span-1">
@@ -76,7 +104,7 @@ const VerifyStudentDetail = () => {
                 >
                   Father's Name
                 </label>
-               <p className='bg-gray-100 p-1 rounded'>{data?.father}</p>
+                <input defaultValue={data?.father} type="text" className='bg-gray-100 p-1 rounded' />
               </div>
 
               <div className="mb-5 col-span-1">
@@ -86,7 +114,7 @@ const VerifyStudentDetail = () => {
                 >
                   Mother's Name
                 </label>
-              <p className='bg-gray-100 p-1 rounded'>{data?.mother}</p>
+                <input defaultValue={data?.mother} type="text" className='bg-gray-100 p-1 rounded' />
               </div>
 
               <div className="mb-5 col-span-1">
@@ -96,7 +124,11 @@ const VerifyStudentDetail = () => {
                 >
                   Gender
                 </label>
-                <p className='bg-gray-100 p-1 rounded'>{data?.gender}</p>
+                <select defaultValue={data?.gender} name='gender' >
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
 
               <div className="mb-5 col-span-1">
@@ -106,7 +138,7 @@ const VerifyStudentDetail = () => {
                 >
                   Date Of Birth
                 </label>
-                <p className='bg-gray-100 p-1 rounded'>{data?.dob}</p>               
+                <input value={date} type="text" className='bg-gray-100 p-1 rounded' />              
               </div>
 
               <div className="mb-5 col-span-1">
@@ -116,7 +148,7 @@ const VerifyStudentDetail = () => {
                 >
                   Email
                 </label>
-                <p className='bg-gray-100 p-1 rounded'>{data?.email}</p>           
+                <input type="email" defaultValue={data?.email} className='bg-gray-100 p-1 rounded' />   
               </div>
 
               <div className="mb-5 col-span-1">
@@ -126,14 +158,20 @@ const VerifyStudentDetail = () => {
                 >
                   College
                 </label>
-              <p className='bg-gray-100 p-1 rounded'>{data?.college}</p>
+              <input type="text" defaultValue={data?.college} className='bg-gray-100 p-1 rounded' />
               </div>
+
               <div className='mb-5 col-span-1'>
                 <label
                   htmlFor="mobile-text"
                   className="mb-3 block text-base font-semibold "
                 > Course </label>
-               <p className='bg-gray-100 p-1 rounded'>{data?.course}</p>
+                <select defaultValue={data?.course} name='course' >
+                  {courses.map((course, i) => (
+                    <option value={course} key={i}>{course}</option>
+                  ))}
+                </select>
+        
               </div>
               <div className="mb-5 col-span-1">
                 <label
@@ -142,7 +180,11 @@ const VerifyStudentDetail = () => {
                 >
                   Level
                 </label>
-                <p className='bg-gray-100 p-1 rounded'>{data?.level}</p>
+                <select defaultValue={data?.level} name='level' >
+                  {level.map((l) => (
+                    <option key={l} value={l}>{l}</option>
+                  ))}
+                </select>
               </div>
 
               <div className="mb-5 col-span-1">
@@ -152,7 +194,7 @@ const VerifyStudentDetail = () => {
                 >
                   Mobile
                 </label>
-              <p className='bg-gray-100 p-1 rounded'>{data?.mobile}</p>
+              <input type="text" defaultValue={data?.mobile} className='bg-gray-100 p-1 rounded' />
               </div>
               
             </div>
