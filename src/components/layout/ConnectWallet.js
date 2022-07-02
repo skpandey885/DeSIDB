@@ -13,8 +13,10 @@ const ConnectWallet = () => {
   const [isAdmin,setIsAdmin] = useState(false);
   const {data:account} = useAccount();
   const {data:signer} = useSigner();
+
   const {connect} = useConnect({
-    connector: new InjectedConnector()
+    connector: new InjectedConnector(),
+    onError: () => alert("Install metamask wallet from www.metamask.io ")
   });
   
   const contract = useContract({
