@@ -27,7 +27,7 @@ const Student = () => {
 
   //db stuff
   const [user, setUser] = useState({
-    fname: "",lname:"",father: "",mother: "", gender:"",dob:"",email: "",college: "",course: "",level: "",mobile: ""
+    fname: "",lname:"",father: "",mother: "", gender:"Male",dob:"",email: "",college: "",course: "B.Tech",level: "Higher Secondary",mobile: ""
   });
   let name, value;
 
