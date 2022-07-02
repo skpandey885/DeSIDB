@@ -40,7 +40,7 @@ app.get("/", function(req,res){
 app.use(Router);
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log("Server is running");
+  console.log("Server is runnin");
 });
 
 
