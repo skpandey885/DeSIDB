@@ -12,7 +12,7 @@
   },
   "name": "backend",
   "version": "1.0.0",
-  "main": "models.js",
+  "main": "server.js",
   "devDependencies": {},
   "author": "mehul",
   "license": "ISC",
