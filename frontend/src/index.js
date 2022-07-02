@@ -5,6 +5,7 @@ import './index.css';
 import App from './pages/App';
 import BrowseCollegesPage from './pages/browse/BrowseCollegesPage';
 import BrowseStudentPage from './pages/browse/BrowseStudentPage';
+import VerifyStudents from './pages/browse/VerifyStudents'
 import RegisterCollegePage from './pages/register/RegisterCollegePage';
 import RegisterStudentPage from './pages/register/RegisterStudentPage';
 import Navbar from './components/layout/Navbar';
@@ -35,6 +36,7 @@ root.render(
       <Route path='/' element={<App />} />
       <Route path='/browse/students' element={<BrowseStudentPage />} />
       <Route path='/browse/colleges' element={<BrowseCollegesPage />} />
+      <Route path='/browse/verify' element={<VerifyStudents />} />
       <Route path='/register/student' element={<RegisterStudentPage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />  
