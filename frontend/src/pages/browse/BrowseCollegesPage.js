@@ -10,6 +10,7 @@ const BrowseCollegesPage = () => {
   const { data: signer } = useSigner();
   const [query,setQuery] = useState('');
   const [filterBy,setFilterBy] = useState('name')
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const contract = useContract({
     addressOrName: CONTRACT_ADDRESS,
@@ -28,6 +29,9 @@ const BrowseCollegesPage = () => {
     }
     setLoading(false)
   }
+
+  
+
 
   useEffect(() => {
     if (signer) {
@@ -49,14 +53,13 @@ const BrowseCollegesPage = () => {
       <h1 className="mt-1 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5  ">Browse Registered Colleges</h1>
       <div className='flex gap-4'>
         <input type="text" className='max-w-[300px]' placeholder='Search by name' value={query} onChange={(e)=>setQuery(e.target.value)}/> 
-        <label className='flex items-center gap-4'>
-          Search By Name 
-        <input type='radio' checked name='filterBy' value='name' onChange={(e=>setFilterBy(e.target.value()))} className='h-5 w-5' />
-        </label>
-        <label className='flex items-center gap-4'>
-          Search By ID 
-        <input type='radio' name='filterBy' value='id'  className='h-5 w-5' />
-        </label>
+        <div>
+
+<select value={filterBy} onChange={(e)=>setFilterBy(e.target.value)} name='filterBy'>
+   <option value="id">Filter by ID</option>
+   <option value="name">Filter by name</option> 
+</select> 
+</div>
       </div>
         <div className="flex flex-wrap gap-8 py-8  ">
         {filterBy === 'name' && allColleges?.filter((data) => (data.collegeName).includes(query)).map(filteredCollege => <Collegecard key={filteredCollege.cid} data={filteredCollege} />)}
