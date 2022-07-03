@@ -44,6 +44,7 @@ const VerifyStudents = () => {
 
     //function to get data
     const getStudents = async () => {
+        // 'https://desidbbackend.herokuapp.com/api'
         const res = await axios.get('https://desidbbackend.herokuapp.com/api');
         const data = res.data;
         console.log(data);

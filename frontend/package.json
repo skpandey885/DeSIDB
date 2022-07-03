@@ -2,7 +2,7 @@
   "name": "teamdev_10",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:5000/",
   "dependencies": {
     "@headlessui/react": "^1.6.5",
     "@testing-library/jest-dom": "^5.16.4",

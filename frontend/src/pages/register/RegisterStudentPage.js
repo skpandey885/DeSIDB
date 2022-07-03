@@ -44,7 +44,7 @@ const Student = () => {
     const {fname,lname,father,mother, gender,dob,email,college,course,level,mobile} = user;
     console.log(fname);
     
-   const res = await fetch('/compose', {
+   const res = await fetch('https://desidbbackend.herokuapp.com/compose', {
     method : "POST",
     headers: {
       "Content-Type" : "application/json"

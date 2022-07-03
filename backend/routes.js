@@ -2,7 +2,16 @@ const express = require("express");
 const studentModel = require("./models");
 const app = express();
 
-
+app.post("/delete" ,function(req,res){
+  const {id} = req.body;
+  studentModel.findByIdAndRemove(id,function(err){
+    if(err){
+      console.log(err);
+    }else{
+      res.redirect("/browse/verify");
+    }
+  });
+})
 
 app.post("/compose", function(req, res){
     

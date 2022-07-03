@@ -60,7 +60,25 @@ const VerifyStudentDetail = () => {
         console.log(newDate);
     }
 
-    
+   
+
+    const deleteFun = async (e) => {
+      e.preventDefault();
+      
+      const id = await data._id;
+      console.log(id);
+      
+     const res = await fetch('https://desidbbackend.herokuapp.com/delete', {
+      method : "POST",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify({
+        id
+      })
+      
+     });
+    }
     
     if (!signer) {
         return <div className='h-[90vh] w-screen flex items-center justify-center'>Pleae Connect to your metamask wallet</div>
@@ -195,6 +213,13 @@ const VerifyStudentDetail = () => {
                   Mobile
                 </label>
               <input type="text" defaultValue={data?.mobile} className='bg-gray-100 p-1 rounded' />
+              </div>
+
+              <div className='col-span-2'>
+                <button type='submit' onClick={deleteFun}  className="px-10 primary-btn disabled:bg-gray-400">
+                Verify and Publish Student
+                  {/* {loading ? "Processing Transaction..." : "Register Student "} */}
+                </button>
               </div>
               
             </div>
