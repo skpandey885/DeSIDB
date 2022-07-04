@@ -1,0 +1,153 @@
+<section class="h-auto px-12 pb-12">
+  <p
+    class="pb-5 mb-5 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100"
+  >
+    Register Student Information
+  </p>
+  <div class="grid grid-cols-2">
+    <form  method="post" class="col-span-1">
+      <div
+        class="grid max-w-screen-md grid-cols-2 gap-x-12"
+      >
+        <div class="col-span-1 mb-5">
+          <label
+            for="first-name"
+            class="block mb-3 text-base font-medium"
+          >
+            First Name
+          </label>
+          <input type="text" name="fname" placeholder="First Name" />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="last-name"
+            class="block mb-3 text-base font-medium"
+          >
+            Last Name
+          </label>
+          <input type="text" name="lname" placeholder=" Last Name" />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="father-name"
+            class="block mb-3 text-base font-medium"
+          >
+            Father&#x27;s Name
+          </label>
+          <input
+            type="text"
+            name="father"
+            placeholder="Father&#x27;s Name"
+          />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="mother-name"
+            class="block mb-3 text-base font-medium"
+          >
+            Mother&#x27;s Name
+          </label>
+          <input
+            name="mother"
+            type="text"
+            placeholder=" Mother&#x27;s Name"
+          />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="gender"
+            class="block mb-3 text-base font-medium"
+          >
+            Gender
+          </label>
+          <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="dob"
+            class="block mb-3 text-base font-medium"
+          >
+            Date Of Birth
+          </label>
+          <input name="dob" type="date" placeholder="Date Of Birth" />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="email"
+            class="block mb-3 text-base font-medium"
+          >
+            Email
+          </label>
+          <input
+            name="email"
+            type="email"
+            placeholder="example@domain.com"
+          />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="college-name"
+            class="block mb-3 text-base font-medium"
+          >
+            College
+          </label>
+          <input name="college" type="text" placeholder="College" />
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="mobile-text"
+            class="block mb-3 text-base font-medium"
+          >
+            Course
+          </label>
+          <select name="course">
+            mapped courses to be added here
+          </select>
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="mobile-text"
+            class="block mb-3 text-base font-medium"
+          >
+            Level
+          </label>
+          <select name="level">
+            mapped levels to be added here
+          </select>
+        </div>
+        <div class="col-span-1 mb-5">
+          <label
+            for="mobile-text"
+            class="block mb-3 text-base font-medium"
+          >
+            Mobile
+          </label>
+          <input
+            name="mobile"
+            type="tel"
+            pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
+            placeholder="Mobile"
+            required=""
+          />
+        </div>
+        <div class="col-span-2">
+          <button
+            type="submit"
+            class="px-10 primary-btn disabled:bg-gray-400"
+          ></button>
+        </div>
+      </div>
+    </form>
+    <div class="col-span-1">
+      <img
+        src="/assets/register-student2.png"
+        class=""
+        alt="..."
+      />
+    </div>
+  </div>
+</section>

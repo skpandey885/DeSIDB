@@ -25,6 +25,51 @@ const Student = () => {
   const { register, handleSubmit } = useForm();
   const { data: signer } = useSigner();
 
+  const [submitStatus, updateSubmit] = useState("Submit");
+  const [currClass, updateClass] = useState("text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2");
+  const [disabledStatus, disabledUpdate] = useState(false);
+
+  //db stuff
+  const [user, setUser] = useState({
+    fname: "", lname: "", father: "", mother: "", gender: "Male", dob: "", email: "", college: "", course: "B.Tech", level: "Higher Secondary", mobile: ""
+  });
+  let name, value;
+
+  const handleInputs = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+    setUser({ ...user, [name]: value });
+
+  }
+
+  const PostData = async (e) => {
+    e.preventDefault();
+
+
+    updateClass("text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2");
+    updateSubmit("Submitted");
+    disabledUpdate(true);
+
+    const { fname, lname, father, mother, gender, dob, email, college, course, level, mobile } = user;
+    console.log(fname);
+
+    const res = await fetch('https://desidbbackend.herokuapp.com/compose', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        fname, lname, father, mother, gender, dob, email, college, course, level, mobile
+      })
+
+    });
+
+
+  }
+
+
+
+
   const contract = useContract({
     addressOrName: CONTRACT_ADDRESS,
     contractInterface: CONTRACT_ABI,
@@ -45,9 +90,9 @@ const Student = () => {
     setLoading(false);
   }
 
-  if (!signer) {
-    return <div className='h-[90vh] w-screen flex items-center justify-center'>Please Connect to your metamask wallet</div>
-  }
+  // if (!signer) {
+  //   return <div className='h-[90vh] w-screen flex items-center justify-center'>Please Connect to your metamask wallet</div>
+  // }
 
   return (
     <div>
@@ -56,7 +101,7 @@ const Student = () => {
           Register Student Information
         </p>
         <div className='grid grid-cols-2 '>
-          <form className='col-span-1' onSubmit={handleSubmit(registerStudent)}>
+          <form className='col-span-1' onSubmit={PostData} method='POST'>
 
             <div className='grid max-w-screen-md grid-cols-2 gap-x-12'>
 
@@ -69,8 +114,11 @@ const Student = () => {
                 </label>
 
                 <input
+
+                  name='fname'
+                  onChange={handleInputs}
                   type="text"
-                  {...register('firstName')}
+
                   placeholder="First Name"
                 />
               </div>
@@ -83,8 +131,10 @@ const Student = () => {
                   Last Name
                 </label>
                 <input
+                  value={user.lname}
                   type="text"
-                  {...register('lastName')}
+                  name='lname'
+                  onChange={handleInputs}
                   placeholder=" Last Name"
                 />
               </div>
@@ -97,8 +147,10 @@ const Student = () => {
                   Father's Name
                 </label>
                 <input
+                  value={user.father}
+                  name='father'
                   type="text"
-                  {...register('fatherName')}
+                  onChange={handleInputs}
                   placeholder="Father's Name"
                 />
               </div>
@@ -111,8 +163,10 @@ const Student = () => {
                   Mother's Name
                 </label>
                 <input
+                  value={user.mother}
+                  name='mother'
                   type="text"
-                  {...register('motherName')}
+                  onChange={handleInputs}
                   placeholder=" Mother's Name"
                 />
               </div>
@@ -124,7 +178,7 @@ const Student = () => {
                 >
                   Gender
                 </label>
-                <select {...register('gender')}>
+                <select value={user.gender} onChange={handleInputs} name='gender' >
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
@@ -140,8 +194,10 @@ const Student = () => {
                   Date Of Birth
                 </label>
                 <input
+                  value={user.dob}
+                  name='dob'
                   type="date"
-                  {...register('dob')}
+                  onChange={handleInputs}
                   placeholder="Date Of Birth"
                 />
               </div>
@@ -154,8 +210,10 @@ const Student = () => {
                   Email
                 </label>
                 <input
+                  value={user.email}
+                  name='email'
                   type="email"
-                  {...register('email')}
+                  onChange={handleInputs}
                   placeholder="example@domain.com"
                 />
               </div>
@@ -168,8 +226,10 @@ const Student = () => {
                   College
                 </label>
                 <input
+                  value={user.college}
+                  name='college'
                   type="text"
-                  {...register('collegeName')}
+                  onChange={handleInputs}
                   placeholder="College"
                 />
               </div>
@@ -178,7 +238,7 @@ const Student = () => {
                   htmlFor="mobile-text"
                   className="block mb-3 text-base font-medium "
                 > Course </label>
-                <select {...register('course')}>
+                <select value={user.course} onChange={handleInputs} name='course' >
                   {courses.map((course, i) => (
                     <option value={course} key={i}>{course}</option>
                   ))}
@@ -191,7 +251,7 @@ const Student = () => {
                 >
                   Level
                 </label>
-                <select {...register('level')} >
+                <select value={user.level} name='level' onChange={handleInputs} >
                   {level.map((l) => (
                     <option key={l} value={l}>{l}</option>
                   ))}
@@ -206,16 +266,19 @@ const Student = () => {
                   Mobile
                 </label>
                 <input
+                  value={user.mobile}
+                  name='mobile'
                   type="tel"
-                  pattern='^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$'
-                  {...register('mobile')}
+                  // pattern='^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$'
+                  onChange={handleInputs}
                   placeholder="Mobile"
                   required
                 />
               </div>
               <div className='col-span-2'>
-                <button type='submit' disabled={loading} className="px-10 primary-btn disabled:bg-gray-400">
-                  {loading ? "Processing Transaction..." : "Register Student "}
+                <button type='submit' className={currClass} disabled={disabledStatus}>
+                  {submitStatus}
+                  {/* {loading ? "Processing Transaction..." : "Register Student "} */}
                 </button>
               </div>
             </div>

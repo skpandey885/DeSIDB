@@ -5,6 +5,7 @@ import './index.css';
 import App from './pages/App';
 import BrowseCollegesPage from './pages/browse/BrowseCollegesPage';
 import BrowseStudentPage from './pages/browse/BrowseStudentPage';
+import VerifyStudents from './pages/browse/VerifyStudents'
 import RegisterCollegePage from './pages/register/RegisterCollegePage';
 import RegisterStudentPage from './pages/register/RegisterStudentPage';
 import Navbar from './components/layout/Navbar';
@@ -15,9 +16,11 @@ import { createClient, WagmiConfig } from 'wagmi';
 import {Toaster} from "react-hot-toast";
 
 import Training from './pages/others/Training';
+import VerifyStudentDetail from './pages/VerifyStudentDetail'
 import StudentDetail from './pages/StudentDetail';
 import Contact from './pages/Contact';
 import Terms from './components/Terms';
+import Verifycard from './components/Verifycard';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,6 +38,7 @@ root.render(
       <Route path='/' element={<App />} />
       <Route path='/browse/students' element={<BrowseStudentPage />} />
       <Route path='/browse/colleges' element={<BrowseCollegesPage />} />
+      <Route path='/browse/verify' element={<VerifyStudents />} />
       <Route path='/register/student' element={<RegisterStudentPage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />
       <Route path='/register/college' element={<RegisterCollegePage />} />  
@@ -44,6 +48,7 @@ root.render(
       
       <Route path='/Contact' element={<Contact />} />  
       <Route path="/browse/students/:id" element={<StudentDetail />} />
+      <Route path="/browse/verify/:id" element={<VerifyStudentDetail />} />
       <Route path='/About' element={<About />} /
       >
       {/* Pending : Individual pages to display single student or college */}
