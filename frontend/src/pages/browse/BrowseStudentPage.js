@@ -82,7 +82,7 @@ const BrowseStudentPage = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-8 py-8  ">
-        {filterBy === 'name' && allStudents.filter((data) => (data.firstName+" "+ data.lastName).includes(query)).map(filteredStudent => <Studentcard key={filteredStudent.sid} data={filteredStudent} />)}
+        {filterBy === 'name' && allStudents.filter((data) => (data.firstName.toLowerCase() +" "+ data.lastName.toLowerCase()).includes(query.toLowerCase())).map(filteredStudent => <Studentcard key={filteredStudent.sid} data={filteredStudent} />)}
         {filterBy === 'id' && allStudents.filter((data) => (data?.sid.toString()).includes(query)).map(filteredStudent => <Studentcard key={filteredStudent.sid} data={filteredStudent} />)}
       </div>
     </div>
