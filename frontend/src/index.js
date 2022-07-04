@@ -23,6 +23,7 @@ import Terms from './components/Terms';
 import Verifycard from './components/Verifycard';
 
 import AddAdminPage from './pages/browse/AddAdminPage';
+import UpdateStudentDetail from './pages/UpdateStudentDetail';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -46,8 +47,9 @@ root.render(
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
-      <Route path='/browse/add-admin' element={<AddAdminPage />} />
 
+      <Route path='/browse/add-admin' element={<AddAdminPage />} />
+      <Route path='/browse/update' element={<UpdateStudentDetail />} />
 
       <Route path='/Terms' element= {<Terms />} />
       

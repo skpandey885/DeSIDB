@@ -37,6 +37,13 @@ export default function BrowseDropdown() {
                     Verify Details
                   </Link>
               </Menu.Item>
+              
+              <Menu.Item>
+                  <Link className='px-3 py-2 rounded hover:bg-gray-100 duration-100' to='/browse/update'>
+                    Update Details
+                  </Link>
+              </Menu.Item>
+
               <Menu.Item>
                   <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/browse/students'>
                     Students
