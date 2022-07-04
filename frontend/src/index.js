@@ -22,6 +22,8 @@ import Contact from './pages/Contact';
 import Terms from './components/Terms';
 import Verifycard from './components/Verifycard';
 
+import AddAdminPage from './pages/browse/AddAdminPage';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const client = createClient({
@@ -44,6 +46,9 @@ root.render(
       <Route path='/register/college' element={<RegisterCollegePage />} />  
       <Route path='/others/fellowships' element={<Fellowship />} />
       <Route path='/others/training' element={<Training />} />
+      <Route path='/browse/add-admin' element={<AddAdminPage />} />
+
+
       <Route path='/Terms' element= {<Terms />} />
       
       <Route path='/Contact' element={<Contact />} />  
