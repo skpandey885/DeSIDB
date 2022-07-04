@@ -242,7 +242,7 @@ const VerifyStudentDetail = () => {
                   >
                     Mobile
                   </label>
-                  <input type="text" defaultValue={data?.mobile} className='bg-gray-100 p-1 rounded' />
+                  <input name='mobile' type="tel" defaultValue={data?.mobile} className='bg-gray-100 p-1 rounded' />
                 </div>
 
                 <div className='col-span-2'>

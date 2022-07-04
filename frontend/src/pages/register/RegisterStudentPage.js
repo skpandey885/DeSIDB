@@ -245,7 +245,7 @@ const Student = () => {
                 <input
                   value={user.mobile}
                   name='mobile'
-                  type="tel"
+                  type="text"
                   // pattern='^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$'
                   onChange={handleInputs}
                   placeholder="Mobile"
