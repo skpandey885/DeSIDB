@@ -49,13 +49,13 @@ root.render(
       <Route path='/others/training' element={<Training />} />
 
       <Route path='/browse/add-admin' element={<AddAdminPage />} />
-      <Route path='/browse/update' element={<UpdateStudentDetail />} />
 
       <Route path='/Terms' element= {<Terms />} />
       
       <Route path='/Contact' element={<Contact />} />  
       <Route path="/browse/students/:id" element={<StudentDetail />} />
       <Route path="/browse/verify/:id" element={<VerifyStudentDetail />} />
+      <Route path='/update/:id' element={<UpdateStudentDetail />} />
       <Route path='/About' element={<About />} /
       >
       {/* Pending : Individual pages to display single student or college */}

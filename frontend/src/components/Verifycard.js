@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+
 const Verifycard = ({ data }) => {
     return (
         <div>

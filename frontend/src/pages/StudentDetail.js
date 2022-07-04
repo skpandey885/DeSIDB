@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useContract, useSigner } from 'wagmi';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../components/contract/contract';
 
 const StudentDetail = () => {
-    const [data,setData] = useState();
-    let params = useParams();
-    const id = params.id;
+      const [data,setData] = useState();
+      let params = useParams();
+      const id = params.id;
 
-    const  {data:signer } = useSigner();
+      const  {data:signer } = useSigner();
 
-    const contract = useContract({
-        addressOrName: CONTRACT_ADDRESS,
-        contractInterface: CONTRACT_ABI,
-        signerOrProvider:signer
-      })
-      
+      const contract = useContract({
+          addressOrName: CONTRACT_ADDRESS,
+          contractInterface: CONTRACT_ABI,
+          signerOrProvider:signer
+        })
+        
 
-    const getStudentData = async () =>{
-        try{
-                const _data = await contract.getStudentByID(id);
-                console.log(_data); 
-                setData(_data);
-        }catch(err){
-            console.log(err);
-        }
-    }
+      const getStudentData = async () =>{
+          try{
+                  const _data = await contract.getStudentByID(id);
+                  console.log(_data); 
+                  setData(_data);
+          }catch(err){
+              console.log(err);
+          }
+      }
 
     useEffect(() => {
      if(signer){
@@ -153,8 +153,10 @@ const StudentDetail = () => {
                 </label>
               <p className='bg-gray-100 p-1 rounded'>{data?.mobileNumber}</p>
               </div>
-              
             </div>
+              <div>
+                <Link to={`/update/${id}`} className="text-white disabled:from-green-400 disabled:via-green-500 disabled:to-green-600 bg-gradient-to-r whitespace-nowrap from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center">Update Info</Link>
+              </div>
             </div>
           <div className='col-span-2 flex items-center justify-center '>
             <img src="https://i.postimg.cc/3wPQjJFm/undraw-Scrum-board-re-wk7v.png" className="h-[500px]" alt="..." />

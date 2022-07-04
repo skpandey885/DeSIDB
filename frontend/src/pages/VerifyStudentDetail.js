@@ -31,7 +31,7 @@ const VerifyStudentDetail = () => {
   const [data, setData] = useState();
   const {register,handleSubmit,setValue} = useForm()
   const [submitStatus, updateSubmit] = useState("Verify");
-  const [currClass, updateClass] = useState("text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2");
+  const [currClass, updateClass] = useState("text-white bg-gradient-to-r from-blue-500 w-full via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2");
   const [disabledStatus, disabledUpdate] = useState(false);
 
   let params = useParams();
@@ -89,7 +89,9 @@ const VerifyStudentDetail = () => {
       })
 
     });
-    return res
+    // Redirect to /verify route after verifying successfully
+    navigate('/browse/verify',{replace:true})
+
   }
   
   const navigate = useNavigate();
@@ -109,8 +111,7 @@ const VerifyStudentDetail = () => {
       console.log(res);
       updateSubmit("Verified & Pubished");
       console.log(registerTx);
-      // Redirect to /verify route after verifying successfully
-      navigate('/browse/verify',{replace:true})
+      
     } catch (err) {
       console.log(err);
     }
@@ -124,11 +125,18 @@ const VerifyStudentDetail = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(registerStudentToBlockhain)}>
         <section className="h-auto px-12 pb-12">
+          <div className='flex items-center justify-between'>
+
           <p className="mt-1 mb-8 text-3xl font-semibold border-b pb-4 text-gray-900  ">
-            Student Info
+            Verify Student Info
           </p>
+          <button onClick={()=>deleteFun()} className="text-white bg-gradient-to-r from-red-500 w-full via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:red-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 w-56" >
+                      Remove Student
+                    {/* {loading ? "Processing Transaction..." : "Register Student "} */}
+                  </button>
+          </div>
+      <form onSubmit={handleSubmit(registerStudentToBlockhain)}>
           <div className='grid grid-cols-3 '>
 
             <div className='col-span-1'>
@@ -255,11 +263,12 @@ const VerifyStudentDetail = () => {
                   <input type="text" {...register('mobile')} className='bg-gray-100 p-1 rounded' />
                 </div>
 
-                <div className='col-span-2'>
-                  <button className={currClass} disabled={disabledStatus} type='submit' >
+                <div className='col-span-2 grid gap-4 grid-cols-2'>
+                  <button className={currClass} disabled={disabledStatus} type='submit'  >
                     {submitStatus}
                     {/* {loading ? "Processing Transaction..." : "Register Student "} */}
                   </button>
+                  
                 </div>
 
               </div>
@@ -268,9 +277,9 @@ const VerifyStudentDetail = () => {
               <img src="https://i.postimg.cc/3wPQjJFm/undraw-Scrum-board-re-wk7v.png" className="h-[500px]" alt="..." />
             </div>
           </div>
+      </form>
         </section>
       
-      </form>
     </div>
   )
 }
