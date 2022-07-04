@@ -58,9 +58,9 @@ const VerifyStudents = () => {
         return <div className='h-[90vh] w-screen flex items-center justify-center'><Loader /></div>
     }
 
-    // if (!isAdmin) {
-    //     return <div className='h-[90vh] w-screen flex items-center justify-center'>You do not have the permission to verify students, Please contact an admin</div>
-    // }
+    if (!isAdmin) {
+        return <div className='h-[90vh] w-screen flex items-center justify-center'>You do not have the permission to verify students, Please contact an admin</div>
+    }
 
     return (
         <div className='min-h-screen px-12 py-4 '>
