@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation, useParams, useNavigate} from 'react-router-dom'
 import { useContract, useSigner } from 'wagmi';
 import axios from 'axios'
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../components/contract/contract';
 import moment from 'moment';
+import toast from 'react-hot-toast';
 
 const courses = [
   'B.Tech',
@@ -65,17 +66,11 @@ const VerifyStudentDetail = () => {
     console.log(newDate);
   }
 
-
-
-  const deleteFun = async (e) => {
-    e.preventDefault();
-
-    updateClass("text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2");
-    updateSubmit("Verified & Pubished");
-    disabledUpdate(true);
+  const deleteFun = async () => {
+    
     const id = await data._id;
     console.log(id);
-
+    
     const res = await fetch('https://desidbbackend.herokuapp.com/delete', {
       method: "POST",
       headers: {
@@ -86,7 +81,33 @@ const VerifyStudentDetail = () => {
       })
 
     });
+    return res
   }
+  
+  const navigate = useNavigate();
+  
+  const registerStudentToBlockhain = async (data) => {
+    try {
+      disabledUpdate(true);
+      updateSubmit("Saving data to blockchain...")
+      updateClass("text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2");
+      // Send transaction to save data to blockchain
+      const registerTx = await contract.registerStudent(data.fname, data.lname, data.father, data.mother, data.gender,data.dob, data.email, data.college, data.level, data.course, data.mobile);
+      await registerTx.wait();
+      toast.success("Data saved to blockchain successfully!");
+      // Delet data from mongodb after  saving to blockchain successfully
+      const res = await deleteFun()
+      console.log(res);
+      updateSubmit("Verified & Pubished");
+      console.log(registerTx);
+      // Redirect to /verify route after verifying successfully
+      navigate('/browse/verify',{replace:true})
+    } catch (err) {
+      console.log(err);
+    }
+
+  }
+
 
   if (!signer) {
     return <div className='h-[90vh] w-screen flex items-center justify-center'>Pleae Connect to your metamask wallet</div>
@@ -225,12 +246,11 @@ const VerifyStudentDetail = () => {
                 </div>
 
                 <div className='col-span-2'>
-                  <button type='submit' className={currClass} disabled={disabledStatus}>
+                  <button className={currClass} disabled={disabledStatus} onClick={()=>registerStudentToBlockhain(data)} >
                     {submitStatus}
                     {/* {loading ? "Processing Transaction..." : "Register Student "} */}
                   </button>
                 </div>
-
 
               </div>
             </div>

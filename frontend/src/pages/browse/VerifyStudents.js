@@ -7,7 +7,7 @@ import Loader from '../../components/Loader';
 import axios from 'axios'
 
 const VerifyStudents = () => {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [filterBy, setFilterBy] = useState('name')
     const [isAdmin, setIsAdmin] = useState(false);
     const [allStudents, setAllStudents] = useState([]);
@@ -50,6 +50,7 @@ const VerifyStudents = () => {
         console.log(data);
         setStudents(data);
         console.log("Data received")
+        setLoading(false)
     }
 
 
@@ -57,24 +58,22 @@ const VerifyStudents = () => {
         return <div className='h-[90vh] w-screen flex items-center justify-center'><Loader /></div>
     }
 
-    if (!isAdmin) {
-        return <div className='h-[90vh] w-screen flex items-center justify-center'>You do not have the permission to verify students, Please contact an admin</div>
-    }
+    // if (!isAdmin) {
+    //     return <div className='h-[90vh] w-screen flex items-center justify-center'>You do not have the permission to verify students, Please contact an admin</div>
+    // }
 
     return (
         <div className='min-h-screen px-12 py-4 '>
-  
             <h1 className="mt-1 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100 mb-5 pb-5  ">Verify Student Information</h1>
             <div className='flex gap-4'>
                 <input type="text" className='max-w-[300px]' placeholder='Search by name' value={query} onChange={(e) => setQuery(e.target.value)} />
-                <label className='flex items-center gap-4'>
-                    Search By Name
-                    <input type='radio' checked name='filterBy' value='name' onChange={(e => setFilterBy(e.target.value()))} className='h-5 w-5' />
-                </label>
-                <label className='flex items-center gap-4'>
-                    Search By ID
-                    <input type='radio' name='filterBy' value='id' className='h-5 w-5' />
-                </label>
+                <div>
+
+                <select value={filterBy} onChange={(e)=>setFilterBy(e.target.value)} name='filterBy'>
+           <option value="id">Filter by ID</option>
+           <option value="name">Filter by name</option> 
+        </select> 
+                </div>
             </div>
             <div className="flex flex-wrap gap-8 py-8  ">
 

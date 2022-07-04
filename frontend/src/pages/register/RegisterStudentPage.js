@@ -67,29 +67,6 @@ const Student = () => {
 
   }
 
-
-
-
-  const contract = useContract({
-    addressOrName: CONTRACT_ADDRESS,
-    contractInterface: CONTRACT_ABI,
-    signerOrProvider: signer
-  })
-
-  const registerStudent = async (data) => {
-    setLoading(true);
-    try {
-      console.log(data);
-      const registerTx = await contract.registerStudent(data.firstName, data.lastName, data.fatherName, data.motherName, data.gender, data.dob, data.email, data.collegeName, data.level, data.course, data.mobile);
-      await registerTx.wait();
-      toast.success("Student registered successfully!");
-      console.log(registerTx);
-    } catch (err) {
-      console.log(err);
-    }
-    setLoading(false);
-  }
-
   // if (!signer) {
   //   return <div className='h-[90vh] w-screen flex items-center justify-center'>Please Connect to your metamask wallet</div>
   // }
