@@ -284,7 +284,7 @@ const VerifyStudentDetail = () => {
               </div>
             </div>
             <div className='col-span-2 flex items-center justify-center '>
-              <img src="https://i.postimg.cc/3wPQjJFm/undraw-Scrum-board-re-wk7v.png" className="h-[500px]" alt="..." />
+              <img src="https://i.postimg.cc/XJRrTC5k/undraw-Experience-design-re-ca7l.png" className=" mb-[100px]" alt="..." />
             </div>
           </div>
       </form>
