@@ -77,10 +77,6 @@ const Student = () => {
 
   }
 
-  if (!signer) {
-    return <div className='h-[90vh] w-screen flex items-center justify-center'>Please Connect to your metamask wallet</div>
-  }
-
   return (
     <div>
       <section className="h-auto px-12 pb-12">
