@@ -14,9 +14,19 @@ const courses = [
   'BCA',
   'B.Sc',
   'B.Pharma',
+  'B.Com',
   'BDS',
   'BPT',
-  'B.A'
+  'B.A',
+  'I.Sc',
+  'I.Com',
+  'I.A',
+  'Diploma',
+  'M.Sc',
+  'M.Com',
+  'M.A',
+  'MCA',
+  'Phd'
 ]
 
 const level = [
@@ -219,7 +229,7 @@ const UpdateStudentDetail = () => {
                 >
                   Level
                 </label>
-                <input {...register('level')} type='text' /> 
+                <input  type='text' /> 
               </div>
 
               <div className="mb-5 col-span-1">
