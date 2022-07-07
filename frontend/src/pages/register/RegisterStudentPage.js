@@ -101,8 +101,8 @@ const Student = () => {
                   name='fname'
                   onChange={handleInputs}
                   type="text"
-
                   placeholder="First Name"
+required
                 />
               </div>
 
@@ -119,6 +119,7 @@ const Student = () => {
                   name='lname'
                   onChange={handleInputs}
                   placeholder=" Last Name"
+required
                 />
               </div>
 
@@ -135,6 +136,7 @@ const Student = () => {
                   type="text"
                   onChange={handleInputs}
                   placeholder="Father's Name"
+required
                 />
               </div>
 
@@ -151,6 +153,7 @@ const Student = () => {
                   type="text"
                   onChange={handleInputs}
                   placeholder=" Mother's Name"
+required
                 />
               </div>
 
@@ -161,7 +164,7 @@ const Student = () => {
                 >
                   Gender
                 </label>
-                <select value={user.gender} onChange={handleInputs} name='gender' >
+                <select value={user.gender} onChange={handleInputs} name='gender' required >
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
@@ -182,6 +185,7 @@ const Student = () => {
                   type="date"
                   onChange={handleInputs}
                   placeholder="Date Of Birth"
+required
                 />
               </div>
 
@@ -198,6 +202,7 @@ const Student = () => {
                   type="email"
                   onChange={handleInputs}
                   placeholder="example@domain.com"
+required
                 />
               </div>
 
@@ -214,6 +219,7 @@ const Student = () => {
                   type="text"
                   onChange={handleInputs}
                   placeholder="College"
+required
                 />
               </div>
               <div className='col-span-1 mb-5'>
@@ -221,7 +227,7 @@ const Student = () => {
                   htmlFor="mobile-text"
                   className="block mb-3 text-base font-medium "
                 > Course </label>
-                <select value={user.course} onChange={handleInputs} name='course' >
+                <select value={user.course} onChange={handleInputs} name='course' required >
                   {courses.map((course, i) => (
                     <option value={course} key={i}>{course}</option>
                   ))}
@@ -234,7 +240,7 @@ const Student = () => {
                 >
                   Level
                 </label>
-                <select value={user.level} name='level' onChange={handleInputs} >
+                <select value={user.level} name='level' onChange={handleInputs} required >
                   {level.map((l) => (
                     <option key={l} value={l}>{l}</option>
                   ))}
@@ -252,7 +258,6 @@ const Student = () => {
                   value={user.mobile}
                   name='mobile'
                   type="text"
-                  // pattern='^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$'
                   onChange={handleInputs}
                   placeholder="Mobile"
                   required
