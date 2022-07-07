@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useContract, useSigner } from 'wagmi';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../../components/contract/contract';
 import toast from 'react-hot-toast'
+import {useNavigate} from 'react-router-dom'
 const level = [
   'Higher Secondary',
   'Bachelors',
@@ -15,9 +16,19 @@ const courses = [
   'BCA',
   'B.Sc',
   'B.Pharma',
+  'B.Com',
   'BDS',
   'BPT',
-  'B.A'
+  'B.A',
+  'I.Sc',
+  'I.Com',
+  'I.A',
+  'Diploma',
+  'M.Sc',
+  'M.Com',
+  'M.A',
+  'MCA',
+  'Phd'
 ]
 
 const Student = () => {
@@ -63,7 +74,6 @@ const Student = () => {
       })
 
     });
-
 
   }
 
