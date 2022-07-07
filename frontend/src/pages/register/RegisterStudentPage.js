@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useContract, useSigner } from 'wagmi';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../../components/contract/contract';
 import toast from 'react-hot-toast'
+import {useNavigate} from 'react-router-dom'
 const level = [
   'Higher Secondary',
   'Bachelors',
@@ -15,9 +16,19 @@ const courses = [
   'BCA',
   'B.Sc',
   'B.Pharma',
+  'B.Com',
   'BDS',
   'BPT',
-  'B.A'
+  'B.A',
+  'I.Sc',
+  'I.Com',
+  'I.A',
+  'Diploma',
+  'M.Sc',
+  'M.Com',
+  'M.A',
+  'MCA',
+  'Phd'
 ]
 
 const Student = () => {
@@ -64,35 +75,11 @@ const Student = () => {
 
     });
 
-
   }
 
-
-
-
-  const contract = useContract({
-    addressOrName: CONTRACT_ADDRESS,
-    contractInterface: CONTRACT_ABI,
-    signerOrProvider: signer
-  })
-
-  const registerStudent = async (data) => {
-    setLoading(true);
-    try {
-      console.log(data);
-      const registerTx = await contract.registerStudent(data.firstName, data.lastName, data.fatherName, data.motherName, data.gender, data.dob, data.email, data.collegeName, data.level, data.course, data.mobile);
-      await registerTx.wait();
-      toast.success("Student registered successfully!");
-      console.log(registerTx);
-    } catch (err) {
-      console.log(err);
-    }
-    setLoading(false);
+  if (!signer) {
+    return <div className='h-[90vh] w-screen flex items-center justify-center'>Please Connect to your metamask wallet</div>
   }
-
-  // if (!signer) {
-  //   return <div className='h-[90vh] w-screen flex items-center justify-center'>Please Connect to your metamask wallet</div>
-  // }
 
   return (
     <div>
@@ -268,7 +255,7 @@ const Student = () => {
                 <input
                   value={user.mobile}
                   name='mobile'
-                  type="tel"
+                  type="text"
                   // pattern='^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$'
                   onChange={handleInputs}
                   placeholder="Mobile"

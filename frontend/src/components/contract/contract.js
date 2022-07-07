@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS =  "0xD0577707566E1dF425C37f45dae4Ea7262C22F7A"
+export const CONTRACT_ADDRESS = "0xD099B0Ea5E7660f9B06544df91B0E0BC7404aD9E"
 
 export const CONTRACT_ABI = [
 	{
@@ -17,6 +17,25 @@ export const CONTRACT_ABI = [
 		"name": "addAdmin",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "email1",
+				"type": "string"
+			}
+		],
+		"name": "checkDatabase",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -56,11 +75,6 @@ export const CONTRACT_ABI = [
 					{
 						"internalType": "string",
 						"name": "tel",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "email",
 						"type": "string"
 					},
 					{
@@ -206,11 +220,6 @@ export const CONTRACT_ABI = [
 					},
 					{
 						"internalType": "string",
-						"name": "email",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
 						"name": "website",
 						"type": "string"
 					},
@@ -343,11 +352,6 @@ export const CONTRACT_ABI = [
 			},
 			{
 				"internalType": "string",
-				"name": "_email",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
 				"name": "_website",
 				"type": "string"
 			},
@@ -426,6 +430,69 @@ export const CONTRACT_ABI = [
 			}
 		],
 		"name": "registerStudent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_firstName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_lastName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_fatherName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_motherName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_gender",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_dob",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_email",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_collegeName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_level",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_course",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_mobileNumber",
+				"type": "string"
+			}
+		],
+		"name": "updateStudentData",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"

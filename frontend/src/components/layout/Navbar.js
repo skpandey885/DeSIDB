@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AdminDropdown from './AdminDropdown'
 import BrowseDropdown from './BrowseDropdown'
 import ConnectWallet from './ConnectWallet'
 import Logo from './Logo'
@@ -18,6 +19,7 @@ const Navbar = () => {
           <RegisterDropdown/>
           <BrowseDropdown/>
           <MiscDropdown/>
+          <AdminDropdown />
           <ConnectWallet/>
         </div>
       </nav>
