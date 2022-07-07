@@ -16,13 +16,17 @@ So in order to address this issue and simplify everyone's life, we present to yo
   <a href="#" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png?20141107110902" alt="realm" width="40" height="40"/> </a> 
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://miro.medium.com/max/1400/0*yqbRInqX0ZRUlVS0" alt="realm" width="40" height="40"/> </a> 
   <a href="#" target="_blank" rel="noreferrer"> <img src="https://ludu-assets.s3.amazonaws.com/lesson-icons/26/i0fLErLtaPoc8J67WzIC" alt="realm" width="40" height="40"/></a> 
+<a href="#" target="_blank" rel="noreferrer"> <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/nodejs-1-logo.png" alt="realm" width="100" height="70"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://trufflesuite.com/assets/logo.png" alt="realm" width="40" height="40"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://www.allangray.co.za/globalassets/information-technology/npm.png" alt="realm" width="120" height="40"/> </a> 
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://technochords.com/wp-content/uploads/2021/07/react-js.png" alt="realm" width="70" height="50"/> </a>
+<a href="#" target="_blank" rel="noreferrer"> <img src="https://www.ictdemy.com/images/5728/mdb.png" alt="realm" width="70" height="70"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://i.postimg.cc/1tJgyJwg/download.png" alt="realm" width="120" height="40"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://www.drupal.org/files/project-images/screenshot_361.png" alt="realm" width="50" height="50"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png" alt="realm" width="50" height="50"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://expolab.org/ecs189f-fall-2020/Projects/Promise/images/remix.png" alt="realm" width="50" height="50"/> </a>
+
+
 
 
 <br>
