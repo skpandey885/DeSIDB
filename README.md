@@ -1,4 +1,3 @@
-//
 <p align="center"><img src="Logo.png" width="100px" height="100px"></p>
 <p><h1 align="center"> DeSIDB
 
