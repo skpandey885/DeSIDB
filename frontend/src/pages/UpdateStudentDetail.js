@@ -229,7 +229,7 @@ const UpdateStudentDetail = () => {
                 >
                   Level
                 </label>
-                <input  type='text' /> 
+                <input {...register('level')}  type='text' /> 
               </div>
 
               <div className="mb-5 col-span-1">
