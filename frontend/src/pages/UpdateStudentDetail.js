@@ -220,7 +220,11 @@ const UpdateStudentDetail = () => {
                   htmlFor="mobile-text"
                   className="mb-3 block text-base font-semibold "
                 > Course </label>
-               <input {...register('course')} type='text'/> 
+                <select {...register('course')} >
+                    {courses.map((l) => (
+                      <option key={l} value={l}>{l}</option>
+                    ))}
+                  </select>
               </div>
               <div className="mb-5 col-span-1">
                 <label
@@ -229,7 +233,11 @@ const UpdateStudentDetail = () => {
                 >
                   Level
                 </label>
-                <input {...register('level')}  type='text' /> 
+                <select  {...register('level')} >
+                    {level.map((l) => (
+                      <option key={l} value={l}>{l}</option>
+                    ))}
+                  </select>
               </div>
 
               <div className="mb-5 col-span-1">

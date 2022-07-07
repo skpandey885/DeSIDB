@@ -27,7 +27,6 @@ const courses = [
   'MCA',
   'Phd'
 ]
-
 const level = [
   'Higher Secondary',
   'Bachelors',
