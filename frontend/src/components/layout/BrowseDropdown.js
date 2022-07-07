@@ -26,18 +26,6 @@ export default function BrowseDropdown() {
         >
           <Menu.Items className="absolute right-0 mt-2 w-40 z-50 origin-top-left bg-white ring-1 ring-gray-200 shadow-lg rounded">
             <div className="p-1  flex flex-col i">
-            <Menu.Item>
-                  <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/browse/add-admin'>
-                    Add Admin
-                  </Link>
-              </Menu.Item>
-            
-            <Menu.Item>
-                  <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/browse/verify'>
-                    Verify Details
-                  </Link>
-              </Menu.Item>
-
               <Menu.Item>
                   <Link className='px-4 py-2 rounded hover:bg-gray-100 duration-100' to='/browse/students'>
                     Students
