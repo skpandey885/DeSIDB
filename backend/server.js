@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const Router = require("./routes")
 const cors = require('cors')
 const app = express();
+require('dotenv').config();
+console.log(process.env);
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -11,10 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
 
-const username = "admin-meh";
-const password = "xfyuqfHXQps97z6";
-const cluster = "cluster0.rfp7p";
-const dbname = "studentDB";
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
+const cluster = process.env.CLUSTER;
+const dbname = process.env.DBNAME;
 
 mongoose.connect(
   `mongodb+srv://${username}:${password}@${cluster}.mongodb.net/${dbname}?retryWrites=true&w=majority`, 
